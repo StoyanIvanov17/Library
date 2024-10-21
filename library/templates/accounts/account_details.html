@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block hero_image %}
+    <img src="{% static 'images/profile_bg.png' %}" alt="About Image">
+    <div class="hero-text">
+        <h1>WELCOME TO YOUR PROFILE</h1>
+        <p>SAVE & KEEP TRACK OF THINGS YOU ENJOY</p>
+        <div class="hero-button" id="scroll-button">PROFILE<i class="fas fa-arrow-down down-arrow"></i></div>
+    </div>
+{% endblock %}
+
+{% block main_content %}
+<div class="profile-wrapper">
+    <!-- Sidebar with Profile Info -->
+    <aside class="profile-sidebar">
+        <div class="profile-info">
+            {% if object.profile_picture %}
+                <img src="{{ object.profile_picture.url }}" alt="Profile Picture" class="profile-pic">
+            {% endif %}
+                <div class="profile-details">
+                    {% if object.first_name %}
+                        <p>{{ user.email }}</p>
+                        <p>{{ object.first_name }} {{ object.last_name }}</p>
+                        <p>{{ object.phone_number }}</p>
+                        <p>{{ object.address }}</p>
+                        <p>{{ object.city }}</p>
+                        <p>{{ user.library_card_number }}</p>
+                    {% endif %}
+                </div>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                {% if object.first_name %}
+                    <li><a href="{% url 'account edit' pk=object.pk %}">Edit Profile</a></li>
+                    <li><a href="#">Delete Profile</a></li>
+                {% else %}
+                    <li><a href="{% url 'registration profile' %}">Finish Your Profile</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content Section for Saved Items and Events -->
+    <section class="profile-main-content">
+        <div class="saved-items">
+            <h1>My Saved Items</h1>
+            {% for item in saved_items %}
+                <div class="profile-item" 
+                    data-item="{{ item.id }}|{{ item.title }}|{% url 'item detail' pk=item.pk slug=item.slug %}|{{ item.item_image.url }}">
+                    <p>{{ item.title }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="saved-events">
+            <h1>My Saved Events</h1>
+            {% for event in saved_events %}
+                <div class="profile-event" 
+                    data-event="{{ event.id }}|{{ event.name }}|{% url 'event detail' pk=event.pk slug=event.slug %}|{{ event.event_image.url }}">
+                    <p>{{ event.name }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Modal for Displaying Item/Event Details -->
+    <div id="profile-modal" class="profile-modal">
+        <div class="profile-modal-content">
+            <span class="profile-close">&times;</span>
+            <img src="" alt="Item/Event Image" class="profile-modal-image">
+            <h2 class="profile-modal-title"></h2>
+            <a href="#" class="profile-modal-link">
+                <button>View Details</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const items = document.querySelectorAll('.profile-item');
+        const events = document.querySelectorAll('.profile-event');
+        const modal = document.getElementById('profile-modal');
+        const closeBtn = document.querySelector('.profile-close');
+        const modalImage = document.querySelector('.profile-modal-image');
+        const modalTitle = document.querySelector('.profile-modal-title');
+        const modalLink = document.querySelector('.profile-modal-link');
+
+        // Function to open modal
+        function openModal(title, image, link) {
+            modal.style.display = "flex";
+            modalTitle.textContent = title;
+            modalImage.src = image;
+            modalLink.href = link;
+        }
+
+        // Add click event to each item
+        items.forEach(item => {
+            item.addEventListener('click', function () {
+                const [id, title, link, image] = item.dataset.item.split('|');
+                openModal(title, image, link);
+            });
+        });
+
+        // Add click event to each event
+        events.forEach(event => {
+            event.addEventListener('click', function () {
+                const [id, title, link, image] = event.dataset.event.split('|');
+                openModal(title, image, link);
+            });
+        });
+
+        // Close modal
+        closeBtn.addEventListener('click', function () {
+            modal.style.display = "none";
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+</script>
+{% endblock %}

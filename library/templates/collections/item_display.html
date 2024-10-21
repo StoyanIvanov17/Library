@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block hero_image %}
+    <img src="{% static 'images/background_collections.png' %}" alt="Nav Image">
+    <div class="hero-text">
+        <div class="hero-button" id="scroll-button">BROWSE OUR COLLECTION<i class="fas fa-arrow-down down-arrow"></i></div>
+    </div>
+{% endblock %}
+
+{% block main_content %}
+    <h1 class="show-collection-title-main">SOMETHING FOR EVERYBODY</h1>
+
+    <div class="collections-wrapper">
+        <!-- Filter Form Container -->
+       <div class="search-filter-container">
+            <form method="GET" action="{% url 'item display' %}">
+                <label>
+                    <input type="text" name="genre" placeholder="Search by Genre" value="{{ genre_query }}" class="search-input">
+                </label>
+                
+                <label>
+                    <input type="radio" name="item_type" value="All" {% if item_type_query == 'All' %}checked{% endif %}>
+                    All
+                </label>
+        
+                {% for value, label in item_choices %}
+                    <label>
+                        <input type="radio" name="item_type" value="{{ value }}" {% if item_type_query == value %}checked{% endif %}>
+                        {{ label }}
+                    </label>
+                {% endfor %}
+                
+                <button type="submit" class="filter-button">Search</button>
+            </form>
+        </div>
+
+        <!-- Collection Results -->
+        <div id="collection-results" class="show-collection-container">
+            {% for item in items %}
+                <div class="show-collection-item">
+                    <img src="{{ item.item_image.url }}" alt="{{ item.title }}" class="show-collection-image">
+                    <div class="show-collection-overlay">
+                        <div class="show-collection-text">
+                            <h2 class="show-collection-title">{{ item.title }}</h2>
+                            <p class="show-collection-author">{{ item.author.name }}</p>
+                            <a href="{% url 'item detail' pk=item.pk slug=item.slug %}" class="show-collection-details-button">Details</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

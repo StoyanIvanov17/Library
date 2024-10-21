@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Library</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="{% url 'home page' %}" class="navbar-logo">MyLibrary</a>
+            <div class="navbar-buttons">
+            {% if user.is_authenticated %}
+                <ul class="navbar-menu">
+                    {% if user.is_superuser or user.is_staff %}
+                        <li class="navbar-item"><a href="{% url 'item create' %}" class="navbar-link">Create Item</a></li>
+                        <li class="navbar-item"><a href="{% url 'event create' %}" class="navbar-link">Create Event</a></li>
+                    {% endif %}
+                    <li class="navbar-item"><a href="{% url 'home page' %}" class="navbar-link">Home</a></li>
+                    <li class="navbar-item"><a href="{% url 'account details' pk=user.pk %}" class="navbar-link">My Account</a></li>
+                    <li class="navbar-item"><a href="{% url 'item display' %}" class="navbar-link">Collections</a></li>
+                    <li class="navbar-item"><a href="{% url 'event display' %}" class="navbar-link">Events</a></li>
+                    <li class="navbar-item"><a href="{% url 'signout user' %}" class="navbar-link">Log out</a></li>
+                </ul>
+            {% else %}
+                <div class="navbar-buttons">
+                    <a href="{% url 'signup user' %}" class="btn register-btn">Register</a>
+                    <a href="{% url 'signin user' %}" class="btn login-btn">Login</a>
+                </div>
+            {% endif %}
+            </div>
+        </div>
+    </nav>
+    
+    <div class="hero-image">
+        {% block hero_image %}
+            <img src="{% static 'images/hiker-reading-book-in-mountain.jpg' %}" alt="Nav Image">
+            <div class="hero-text">
+                <h1>A PLACE FOR EVERYBODY</h1>
+                <p>BOOKS & AUDIO BOOKS & DVDS & MAGAZINES</p>
+                <div class="hero-button" id="scroll-button">BEGIN<i class="fas fa-arrow-down down-arrow"></i></div>
+            </div>
+        {% endblock %}
+    </div>
+    
+    <div id="main-content">
+        {% block main_content %}
+        {% endblock %}
+    </div>
+    
+    <script>
+        document.getElementById('scroll-button').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default behavior (optional if it's not a link)
+            const target = document.getElementById('main-content');
+            const headerOffset = 50; // Offset to compensate for the navbar height
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    
+            // Custom smooth scroll function with reduced duration
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+    
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>

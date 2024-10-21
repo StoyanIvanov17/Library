@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<div class="hero-image">
+    {% block hero_image %}
+        <img src="{{ event.event_image.url }}" alt="Nav Image">
+        <div class="hero-text">
+            <div class="hero-button" id="scroll-button">ABOUT THE EVENT<i class="fas fa-arrow-down down-arrow"></i></div>
+        </div>
+    {% endblock %}
+</div>
+
+{% block main_content %}
+<div class="event-detail-container">
+    <div class="event-detail-content">
+         <div class="item-details-action-buttons">
+           {% if user.is_superuser %}
+               <a href="{% url 'event edit' pk=object.pk slug=object.slug %}" class="item-details-edit">Edit</a>
+               <a href="#" id="delete-item-btn" class="item-details-remove">Delete</a>           {% endif %}
+           <button id="save-item-btn" data-item-id="{{ object.id }}" class="save-profile-btn">
+               <span class="save-text">
+                   {% if object in request.user.libraryprofile.saved_events.all %}
+                       ALREADY JOINED
+                   {% else %}
+                       I'M INTERESTED
+                   {% endif %}
+               </span>
+           </button>
+       </div>
+
+        <h1 class="event-detail-title">{{ event.name }}</h1>
+
+        <!-- Separator line -->
+        <hr class="event-detail-separator">
+
+        <div class="event-detail-info">
+            <p><strong>Date:</strong> {{ event.date }}</p>
+            <p><strong>Time:</strong> {{ event.time }}</p>
+            <p><strong>Location:</strong> {{ event.location }}</p>
+            <p><strong>Age Group:</strong> {{ event.age_group }}</p>
+        </div>
+
+        <div class="event-detail-description">
+            <p>{{ event.description }}</p>
+        </div>
+    </div>
+</div>
+    
+<div id="delete-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Delete {{ object.name }}?</h2>
+        <p>Are you sure you want to delete this item?</p>
+        <div class="delete-action-buttons">
+            <button id="confirm-delete-btn" class="confirm-delete">Yes, Delete</button>
+            <button id="cancel-delete-btn" class="cancel-delete">Cancel</button>
+        </div>
+    </div>
+</div>
+    
+<script>
+    const deleteModal = document.getElementById("delete-modal");
+    const deleteBtn = document.getElementById("delete-item-btn");
+    const closeDeleteBtns = document.getElementsByClassName("close-btn"); // Get both close buttons
+    const cancelDeleteBtn = document.getElementById("cancel-delete-btn");
+    const confirmDeleteBtn = document.getElementById("confirm-delete-btn");
+
+    function disableScrolling() {
+        document.body.style.overflow = "hidden";
+    }
+
+    function enableScrolling() {
+        document.body.style.overflow = "auto";
+    }
+
+    function openModal(modalElement) {
+        modalElement.style.display = "block";
+        disableScrolling();
+    }
+
+    function closeModal(modalElement) {
+        modalElement.style.display = "none";
+        enableScrolling();
+    }
+
+    // Open delete modal
+    deleteBtn.onclick = function(event) {
+        event.preventDefault(); 
+        openModal(deleteModal);
+    }
+
+    // Close modals with close buttons
+    for (let closeBtn of closeDeleteBtns) {
+        closeBtn.onclick = function() {
+            closeModal(deleteModal);
+        }
+    }
+
+    // Cancel button closes the modal
+    cancelDeleteBtn.onclick = function() {
+        closeModal(deleteModal);
+    }
+
+    // Confirm delete action
+    confirmDeleteBtn.onclick = function() {
+        fetch("{% url 'event delete' pk=object.pk slug=object.slug %}", {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                window.location.href = "{% url 'event display' %}"; // Redirect after successful deletion
+            } else {
+                console.error('Error during deletion');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        if (event.target === deleteModal) {
+            closeModal(deleteModal);
+        }
+    }
+</script>
+
+
+<script>
+    document.getElementById('save-item-btn').addEventListener('click', function(event) {
+        const itemId = this.getAttribute('data-item-id');
+        const itemSlug = '{{ object.slug }}'; 
+        const saveText = this.querySelector('.save-text');
+
+        fetch(`/events/${itemId}/${itemSlug}/save_event/`, { 
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ item_id: itemId })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.favorited) {
+                saveText.innerHTML = 'ALREADY JOINED';
+            } else {
+                saveText.innerHTML = "I'M INTERESTED";
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+</script>
+
+{% endblock %}

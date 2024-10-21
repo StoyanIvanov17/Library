@@ -1,0 +1,22 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+
+{% block main_content %}
+    <div class="item-create-form-container">
+        <div class="item-create-form-section">
+            <h2 class="item-create-form-title">Create a New Event</h2>
+            <form action="{% url 'event create' %}" method="post" enctype="multipart/form-data" class="item-create-form">
+                {% csrf_token %}
+                <div class="item-create-form-group">
+                    {{ form }}
+                </div>
+                <button type="submit" class="item-create-submit-button">Create Event</button>
+                <button type="button" onclick="history.back()" class="item-create-back-button">Go Back</button>
+            </form>
+        </div>
+        <div class="item-create-image-section">
+            <img src="{% static 'images/event-create.jpg' %}" alt="Book Image" class="item-create-book-image">
+        </div>
+    </div>
+{% endblock %}

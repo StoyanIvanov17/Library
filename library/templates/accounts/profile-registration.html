@@ -1,0 +1,35 @@
+{% load static %}
+{% load filters %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Complete Your Profile</title>
+</head>
+<body class="log_reg_body" style="background-image: url('{% static 'images/mountain-cloud-hiker-person.jpg' %}');">
+    <div class="log_reg_body_overlay"></div>
+    <div class="log_reg_body_register">
+        <h1 class="log_reg_body_h1">Complete Your Profile</h1>
+        <form action="{% url 'registration profile' %}" method="POST" class="log_reg_form" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.first_name|placeholder:'First Name' }}
+            {{ form.last_name|placeholder:'Last Name' }}
+            {{ form.address|placeholder:'Address' }}
+            {{ form.phone_number|placeholder:'Phone Number' }}
+            {{ form.city|placeholder:'City' }}
+            
+            <label for="profile_picture" class="custom-file-label">
+                <i class="fas fa-upload"></i> Upload Profile Picture
+            </label>
+            <input type="file" id="profile_picture" name="profile_picture" class="form-control">
+            
+            <button type="submit">Save Profile</button>
+            <button type="button" onclick="window.location.href='{% url 'account details' pk=object.pk %}'" 
+                    class="item-create-back-button">Skip for now</button>
+
+        </form>
+    </div>
+</body>
+</html>

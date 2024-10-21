@@ -1,0 +1,94 @@
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0; /* Adjust this padding as needed */
+    z-index: 10;
+    background: transparent; /* Transparent background over the hero image */
+    color: white;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: add shadow for depth */
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Solid background on scroll */
+}
+
+.navbar-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Center the navbar items */
+    align-items: center;
+}
+
+.navbar-title {
+    flex-grow: 1; /* Allows the title to take up available space */
+    text-align: center; /* Centers the title */
+    color: white; /* Adjust the color as needed */
+    font-size: 1.5rem; /* Adjust font size */
+}
+
+.navbar-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Center items vertically */
+}
+
+.navbar-item {
+    margin: 0 20px; /* Increase margin for more space */
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem; /* Increase font size */
+    padding: 10px 15px; /* Add padding for clickable area */
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #f0f0f0; /* Change color on hover */
+}
+
+.navbar-buttons {
+    display: flex;
+    align-items: center; /* Center buttons vertically */
+}
+
+.btn {
+    margin-left: 20px; /* Increase margin for spacing */
+    padding: 10px 25px; /* Increase padding */
+    font-size: 1rem; /* Font size for buttons */
+    color: #fff;
+    background-color: #28a3a3; /* Button background color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #006060; /* Darken button on hover */
+}
+
+.login-btn,
+.register-btn {
+    background-color: #28a3a3; /* Green background for register button */
+}
+
+.register-btn:hover,
+.login-btn:hover {
+    background-color: #006060; /* Darken on hover */
+}

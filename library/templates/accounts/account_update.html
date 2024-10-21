@@ -1,0 +1,21 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+<div class="item-create-form-container">
+    <div class="item-create-form-section">
+        <h2 class="item-create-form-title">Edit Profile</h2>
+        <form action="{% url 'account edit' pk=object.pk %}" method="post" enctype="multipart/form-data" class="item-create-form">
+            {% csrf_token %}
+            <div class="item-create-form-group">
+                {{ form }}
+            </div>
+            <button type="submit" class="item-create-submit-button">Edit Item</button>
+            <button type="button" onclick="history.back()" class="item-create-back-button">Go Back</button>
+        </form>
+    </div>
+    <div class="item-create-image-section">
+        {% if object.profile_picture %}
+            <img src="{{ object.profile_picture.url }}" alt="{{ object.title }} image" class="item-create-book-image">
+        {% endif %}
+    </div>
+</div>

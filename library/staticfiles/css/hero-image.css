@@ -1,0 +1,85 @@
+/* Hero Image Section */
+.hero-image {
+    position: relative; /* Establish a positioning context */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide overflow */
+    object-position: bottom;
+}
+
+.hero-image img {
+    position: absolute; /* Position absolute to fill the container */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
+    object-position: bottom;
+}
+/* Hero Image Section */
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    object-position: bottom;
+}
+
+.hero-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+/* Hero Text */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 2px;
+}
+
+.down-arrow {
+    margin-left: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.hero-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+}
+

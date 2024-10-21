@@ -1,0 +1,67 @@
+{% load static %}
+{% load filters %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Library</title>
+</head>
+<body class="log_reg_body" style="background-image: url('{% static 'images/man-sea-water-nature-person-mountain.jpg' %}');">
+    <div class="log_reg_body_overlay"></div>
+    <div class="log_reg_body_register">
+        <h1>Register</h1>
+        <form class="log_reg_form" action="{% url 'signup user' %}" method="POST">
+            {% csrf_token %}
+            {{ form.email|placeholder:'Email' }}
+            {{ form.password1|placeholder:'Password' }}
+            {{ form.password2|placeholder:'Repeat Password' }}
+            
+            <button type="submit">Register</button>
+            <p>Already have an account? <a href="{% url 'signin user' %}">Log in</a></p>
+        </form>
+    </div>
+    
+    <div id="verificationModal" class="verification-modal" style="display: none;">
+    <div class="verification-modal-content">
+        <span class="verification-close-button" id="closeModal">&times;</span>
+        {% csrf_token %}
+        <h2>Email Verification Pending</h2>
+        <p>Please check your email for a verification link to complete your registration.</p>
+    </div>
+</div>
+
+    <script>
+        document.querySelector('.log_reg_form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const formData = new FormData(this);
+        
+        fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'X-CSRFToken': '{{ csrf_token }}',
+            },
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const modal = document.getElementById('verificationModal');
+                modal.style.display = 'block';
+                document.querySelector('.verification-modal-content p').innerText = data.message;
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+        document.getElementById('closeModal').addEventListener('click', function() {
+        document.getElementById('verificationModal').style.display = 'none';
+    });
+    </script>
+
+</body>
+</html>

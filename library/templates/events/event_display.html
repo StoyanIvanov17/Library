@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- Hero Image Section -->
+<div class="hero-image">
+    {% block hero_image %}
+        <img src="{% static 'images/Bonfire.jpg' %}" alt="Nav Image">
+        <div class="hero-text">
+            <div class="hero-button" id="scroll-button">
+                OUTSIDE GATHERINGS & EVENTS
+                <i class="fas fa-arrow-down down-arrow"></i>
+            </div>
+        </div>
+    {% endblock %}
+</div>
+
+{% block main_content %}
+    <h1 class="show-collection-title-main">OUR OUTDOOR GATHERINGS</h1>
+    
+    <div class="page-container">
+        <div class="search-filter-container">
+            <form method="GET" action="{% url 'event display' %}">
+                <label>
+                    <input type="radio" name="filter" value="upcoming" {% if filter_upcoming == 'upcoming' %}checked{% endif %}>
+                    Upcoming Events
+                </label>
+                <label>
+                    <input type="radio" name="filter" value="all" {% if filter_upcoming == 'all' %}checked{% endif %}>
+                    All Events
+                </label>
+                <button type="submit" class="filter-button">Filter</button>
+            </form>
+        </div>
+    
+        <div class="event-container">
+            {% for event in events %}
+                <div class="event-item">
+                    <div class="event-content">
+                        <h2 class="event-name">{{ event.name }}</h2>
+                        <p class="event-datetime">{{ event.date }} @ {{ event.time }}</p>
+                        <p class="event-location">{{ event.location }}</p>
+                        <p class="event-age-group">Age Group: {{ event.age_group }}</p>
+                        <p class="event-description">{{ event.description|truncatewords:20 }}</p>
+                        <a href="{% url 'event detail' pk=event.pk slug=event.slug %}" class="event-detail-link">Event Details</a>
+                    </div>
+                    <div class="event-image">
+                        <img src="{{ event.event_image.url }}" alt="{{ event.name }}">
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

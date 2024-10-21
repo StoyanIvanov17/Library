@@ -1,0 +1,113 @@
+.item-create-form-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center items horizontally */
+    align-items: stretch; /* Ensure equal height */
+    margin: 20px auto; /* Center the container and add vertical margins */
+    width: 1000px; /* Fixed width for the container */
+    gap: 20px; /* Add space between form and image */
+    height: auto;
+}
+
+.item-create-form-section,
+.item-create-image-section {
+    flex: 0 0 40%; /* Adjusted width for form and image sections */
+    background-color: #fff; /* White background for form */
+    padding: 20px; /* Add padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    display: flex; /* Allow flexbox to align content inside */
+    flex-direction: column; /* Stack elements vertically */
+    border: 1px solid #ccc; /* Same border for both sections */
+    height: auto;
+}
+
+.item-create-image-section {
+    display: flex;
+    justify-content: center; /* Center the image */
+    align-items: center; /* Center the image vertically */
+    overflow: hidden; /* Ensure no overflow */
+    border-radius: 8px; /* Match border radius with the form */
+    height: auto;
+}
+
+.item-create-book-image {
+    width: 100%; /* Full width of container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100%; /* Ensure it doesn't exceed the container height */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    border-radius: 8px; /* Rounded corners for image */
+}
+
+.item-create-form-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.item-create-form-group {
+    margin-bottom: 15px;
+}
+
+.item-create-form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.item-create-form input,
+.item-create-form select {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding for inputs */
+    font-size: 1rem; /* Font size */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+    transition: border-color 0.3s; /* Transition for focus */
+}
+
+.item-create-form input:focus,
+.item-create-form select:focus {
+    border-color: #28a3a3; /* Border color on focus */
+    outline: none; /* Remove outline */
+}
+
+.item-create-submit-button {
+    width: 100%; /* Full width for button */
+    padding: 10px; /* Padding for button */
+    font-size: 1.2rem; /* Font size for button */
+    color: white; /* Text color */
+    background-color: #28a3a3; /* Button background color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition for hover */
+}
+
+.item-create-submit-button:hover {
+    background-color: #006060; /* Darken button on hover */
+}
+.item-create-form input,
+.item-create-form select,
+.item-create-form textarea {
+    margin-bottom: 20px; /* Increase space between inputs */
+    width: 100%; /* Ensure all inputs are full width */
+    padding: 10px; /* Add padding to make inputs consistent */
+    border: 1px solid #ccc; /* Standardize border across fields */
+    border-radius: 5px; /* Add rounded corners */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+.item-create-back-button {
+    width: 100%; /* Full width for button */
+    padding: 10px; /* Padding for button */
+    font-size: 1.2rem; /* Font size for button */
+    color: white; /* Text color */
+    background-color: #6c757d; /* Button background color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition for hover */
+    margin-bottom: 20px; /* Add margin between buttons */
+}
+
+.item-create-back-button:hover {
+    background-color: #5a6268; /* Darken button on hover */
+}
