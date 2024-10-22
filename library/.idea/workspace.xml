@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3487039d-45c7-437a-929a-29e1de615454" name="Changes" comment="" />
+    <list default="true" id="3487039d-45c7-437a-929a-29e1de615454" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,9 +20,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -50,26 +53,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.library.executor&quot;: &quot;Run&quot;,
-    &quot;Python.views.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/freak/Library/library/staticfiles/images&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.library.executor": "Run",
+    "Django tests.Test: tests.collections.views.tests_BookCreateView.BookCreateViewTests.test_get_create__when_authorized_user__expect_200.executor": "Run",
+    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.executor": "Run",
+    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_unauthorized_user__expect_raise_403.executor": "Run",
+    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_authorized_user__expect_302_and_redirect_to_item_collections.executor": "Run",
+    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_authorized_user__expect_302_and_redirect_to_item_details.executor": "Run",
+    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_invalid_data__expect_form_errors.executor": "Run",
+    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_valid_data__expect_item_created.executor": "Run",
+    "Python.views.executor": "Debug",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/freak/Library/library",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\freak\Library\library\staticfiles\images" />
@@ -85,8 +96,8 @@
       <recent name="C:\Users\freak\MyLibraryWebApp\library\library" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.library">
-    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests">
+    <configuration name="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests" type="DjangoTestsConfigurationType" temporary="true">
       <module name="library" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -95,18 +106,100 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/library/lb_collections" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/library/lb_collections/views.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="TARGET" value="tests.collections.views.tests_ItemCreateView.BookCreateViewTests" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_unauthorized_user__expect_raise_403" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="library" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_unauthorized_user__expect_raise_403" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_authorized_user__expect_302_and_redirect_to_item_collections" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="library" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_authorized_user__expect_302_and_redirect_to_item_collections" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_invalid_data__expect_form_errors" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="library" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_invalid_data__expect_form_errors" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_valid_data__expect_item_created" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="library" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_valid_data__expect_item_created" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
     <configuration name="library" type="Python.DjangoServer" factoryName="Django server">
@@ -186,7 +279,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.views" />
+        <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests" />
+        <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_valid_data__expect_item_created" />
+        <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_unauthorized_user__expect_raise_403" />
+        <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_invalid_data__expect_form_errors" />
+        <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_authorized_user__expect_302_and_redirect_to_item_collections" />
       </list>
     </recent_temporary>
   </component>
@@ -337,6 +434,12 @@
       <workItem from="1729587149211" duration="3025000" />
       <workItem from="1729603880087" duration="2395000" />
       <workItem from="1729606680785" duration="1634000" />
+      <workItem from="1729608332825" duration="816000" />
+      <workItem from="1729609728500" duration="441000" />
+      <workItem from="1729612570970" duration="1537000" />
+      <workItem from="1729617424307" duration="957000" />
+      <workItem from="1729618585535" duration="1222000" />
+      <workItem from="1729621136389" duration="1136000" />
     </task>
     <servers />
   </component>
@@ -344,6 +447,13 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests Coverage Results" MODIFIED="1729622261162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/library$views.coverage" NAME="views Coverage Results" MODIFIED="1727381601546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/library/lb_collections" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_BookCreateView_BookCreateViewTests_test_get_create__when_authorized_user__expect_200.coverage" NAME="Test: tests.collections.views.tests_BookCreateView.BookCreateViewTests.test_get_create__when_authorized_user__expect_200 Coverage Results" MODIFIED="1729618171497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests_test_post_create__when_authorized_user__expect_302_and_redirect_to_item_details.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_authorized_user__expect_302_and_redirect_to_item_details Coverage Results" MODIFIED="1729619368868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests_test_post_create__when_valid_data__expect_item_created.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_valid_data__expect_item_created Coverage Results" MODIFIED="1729622203124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests_test_post_create__when_invalid_data__expect_form_errors.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_invalid_data__expect_form_errors Coverage Results" MODIFIED="1729621694761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests_test_post_create__when_authorized_user__expect_302_and_redirect_to_item_collections.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_authorized_user__expect_302_and_redirect_to_item_collections Coverage Results" MODIFIED="1729619504009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests_test_get_create__when_unauthorized_user__expect_raise_403.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_unauthorized_user__expect_raise_403 Coverage Results" MODIFIED="1729621762370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
