@@ -12,6 +12,3 @@ class TestBase(TestCase):
 
     def _create_user(self):
         return UserModel.objects.create_user(**self.USER_DATA)
-
-    # def assertListEmpty(self, list):
-    #     self.assertEqual(0, len(list))

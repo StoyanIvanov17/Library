@@ -51,7 +51,8 @@ class Item(models.Model):
 
     item_type = models.CharField(
         max_length=MAX_ITEM_TYPE_LENGTH,
-        choices=ItemTypeChoices.choices
+        choices=ItemTypeChoices.choices,
+        verbose_name='Item Type'
     )
 
     publication_date = models.DateField()
@@ -73,6 +74,7 @@ class Item(models.Model):
         blank=False,
         null=False,
         validators=[MaxFileSizeValidator(10 * 1024 * 1024)],
+        verbose_name='Item Image'
     )
 
     def save(self, *args, **kwargs):
