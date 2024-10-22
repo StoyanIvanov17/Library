@@ -155,5 +155,5 @@ dmypy.json
 cython_debug/
 
 .idea/
-**/*.jpeg
-**/*.jpg
+**/.jpeg
+**/.jpg
