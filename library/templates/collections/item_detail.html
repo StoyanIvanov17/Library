@@ -109,271 +109,272 @@
         </div>
     </div>
 </div>
-
-
-<script>
-    const reviewForm = document.getElementById('review-form');
-    const submitButton = document.getElementById('submit-review-btn');
-    const reviewList = document.getElementById('reviews-list');
-    const stars = document.querySelectorAll('.star'); // Select all star elements
-    let selectedRating = 1; // Default rating
-    
-    // Function to handle star selection
-    stars.forEach(star => {
-        star.addEventListener('click', function() {
-            selectedRating = this.dataset.value; // Update the selected rating
-            updateStarDisplay(); // Update star display
-        });
-    });
-    
-    // Function to update star display
-    function updateStarDisplay() {
+    <script>
+        const reviewForm = document.getElementById('review-form');
+        const submitButton = document.getElementById('submit-review-btn');
+        const reviewList = document.getElementById('reviews-list');
+        const stars = document.querySelectorAll('.star'); // Select all star elements
+        let selectedRating = 1; // Default rating
+        
+        // Function to handle star selection
         stars.forEach(star => {
-            if (parseInt(star.dataset.value) <= selectedRating) {
-                star.classList.add('selected'); // Add 'selected' class to filled stars
-            } else {
-                star.classList.remove('selected'); // Remove 'selected' class from empty stars
-            }
+            star.addEventListener('click', function() {
+                selectedRating = this.dataset.value; // Update the selected rating
+                updateStarDisplay(); // Update star display
+            });
         });
-    }
-    
-    submitButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-    
-        const formData = new FormData(reviewForm);
-        formData.append('rating', selectedRating); // Append the selected star rating
-    
-        fetch('{% url "item detail" pk=object.pk slug=object.slug %}', {
-            method: 'POST',
-            headers: {
-                'X-CSRFToken': '{{ csrf_token }}',
-            },
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                const newReview = document.createElement('div');
-                newReview.classList.add('review-item');
-                newReview.innerHTML = `
-                    <div class="review-rating">Rating: ${selectedRating}/5</div>
-                    <p class="review-comment">${data.review_text}</p>
-                    <p class="review-user">Posted by ${data.username} on ${data.created_at}</p>
-                `;
-                reviewList.prepend(newReview); // Add new review to the top
-                reviewForm.reset(); // Clear the form
-    
-                // Deselect stars after submission
-                selectedRating = 1; // Reset the selected rating
-                updateStarDisplay(); // Update star display to default
-            } else {
-                alert('Failed to submit review: ' + JSON.stringify(data.errors));
-            }
-        })
-        .catch(error => console.error('Error:', error));
-    });
-</script>
-
-<script>
-    const deleteModal = document.getElementById("delete-modal");
-    const deleteBtn = document.getElementById("delete-item-btn");
-    const closeDeleteBtns = document.getElementsByClassName("close-btn");
-    const cancelDeleteBtn = document.getElementById("cancel-delete-btn");
-    const confirmDeleteBtn = document.getElementById("confirm-delete-btn");
-
-    function disableScrolling() {
-        document.body.style.overflow = "hidden";
-    }
-
-    function enableScrolling() {
-        document.body.style.overflow = "auto";
-    }
-
-    function openModal(modalElement) {
-        modalElement.style.display = "block";
-        disableScrolling();
-    }
-
-    function closeModal(modalElement) {
-        modalElement.style.display = "none";
-        enableScrolling();
-    }
-
-    // Open delete modal
-    deleteBtn.onclick = function(event) {
-        event.preventDefault(); 
-        openModal(deleteModal);
-    }
-
-    // Close modals with close buttons
-    for (let closeBtn of closeDeleteBtns) {
-        closeBtn.onclick = function() {
-            closeModal(deleteModal);
-        }
-    }
-
-    // Cancel button closes the modal
-    cancelDeleteBtn.onclick = function() {
-        closeModal(deleteModal);
-    }
-
-    // Confirm delete action
-    confirmDeleteBtn.onclick = function() {
-        fetch("{% url 'item delete' pk=object.pk slug=object.slug %}", {
-            method: 'POST',
-            headers: {
-                'X-CSRFToken': '{{ csrf_token }}'
-            }
-        })
-        .then(response => {
-            if (response.ok) {
-                window.location.href = "{% url 'item display' %}"; // Redirect after successful deletion
-            } else {
-                console.error('Error during deletion');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    }
-
-    // Close modal when clicking outside
-    window.onclick = function(event) {
-        if (event.target === deleteModal) {
-            closeModal(deleteModal);
-        }
-    }
-</script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const sampleModal = document.getElementById("sample-modal");
-        const openSampleBtn = document.getElementById("open-sample-btn");
-        const closeBtns = document.getElementsByClassName("close-btn");
-        const sampleTextContainer = document.getElementById("sample-text-container");
-        const sampleText = `{{ object.sample|escapejs }}`; // Escape the sample text for JavaScript
-        const pageSize = 500; // Adjust the number of characters per page as needed
-        let pages = [];
-        let currentPage = 0;
-
-        // Split the sample text into pages
-        function paginateSampleText(text, pageSize) {
-            let words = text.split(' ');
-            let pagesArray = [];
-            let currentPageText = '';
-
-            words.forEach(word => {
-                if ((currentPageText + word + ' ').length > pageSize) {
-                    pagesArray.push(currentPageText.trim());
-                    currentPageText = word + ' ';
+        
+        // Function to update star display
+        function updateStarDisplay() {
+            stars.forEach(star => {
+                if (parseInt(star.dataset.value) <= selectedRating) {
+                    star.classList.add('selected'); // Add 'selected' class to filled stars
                 } else {
-                    currentPageText += word + ' ';
+                    star.classList.remove('selected'); // Remove 'selected' class from empty stars
                 }
             });
-
-            if (currentPageText.trim().length > 0) {
-                pagesArray.push(currentPageText.trim());
-            }
-
-            return pagesArray;
         }
         
-        function updateSampleText() {
-            sampleTextContainer.innerHTML = `<p>${pages[currentPage]}</p>`;
-            document.getElementById("current-page").textContent = `Page ${currentPage + 1} of ${pages.length}`;
-            document.getElementById("prev-page-btn").disabled = currentPage === 0;
-            document.getElementById("next-page-btn").disabled = currentPage === pages.length - 1;
-        }
-
-        function openSampleModal(event) {
-            event.preventDefault();
-            pages = paginateSampleText(sampleText, pageSize);
-            currentPage = 0;
-            updateSampleText();
-            openModal(sampleModal);
-        }
-
-        document.getElementById("prev-page-btn").addEventListener("click", function() {
-            if (currentPage > 0) {
-                currentPage--;
-                updateSampleText();
-            }
+        submitButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+        
+            const formData = new FormData(reviewForm);
+            formData.append('rating', selectedRating); // Append the selected star rating
+        
+            fetch('{% url "item detail" pk=object.pk slug=object.slug %}', {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}',
+                },
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const newReview = document.createElement('div');
+                    newReview.classList.add('review-item');
+                    newReview.innerHTML = `
+                        <div class="review-rating">Rating: ${selectedRating}/5</div>
+                        <p class="review-comment">${data.review_text}</p>
+                        <p class="review-user">Posted by ${data.username} on ${data.created_at}</p>
+                    `;
+                    reviewList.prepend(newReview); // Add new review to the top
+                    reviewForm.reset(); // Clear the form
+        
+                    // Deselect stars after submission
+                    selectedRating = 1; // Reset the selected rating
+                    updateStarDisplay(); // Update star display to default
+                } else {
+                    alert('Failed to submit review: ' + JSON.stringify(data.errors));
+                }
+            })
+            .catch(error => console.error('Error:', error));
         });
-
-        document.getElementById("next-page-btn").addEventListener("click", function() {
-            if (currentPage < pages.length - 1) {
-                currentPage++;
-                updateSampleText();
-            }
-        });
-
-        openSampleBtn.addEventListener("click", openSampleModal);
-
-        // Close modal functionality
-        for (const closeBtn of closeBtns) {
+    </script>
+    
+    <script>
+        const deleteModal = document.getElementById("delete-modal");
+        const deleteBtn = document.getElementById("delete-item-btn");
+        const closeDeleteBtns = document.getElementsByClassName("close-btn");
+        const cancelDeleteBtn = document.getElementById("cancel-delete-btn");
+        const confirmDeleteBtn = document.getElementById("confirm-delete-btn");
+    
+        function disableScrolling() {
+            document.body.style.overflow = "hidden";
+        }
+    
+        function enableScrolling() {
+            document.body.style.overflow = "auto";
+        }
+    
+        function openModal(modalElement) {
+            modalElement.style.display = "block";
+            disableScrolling();
+        }
+    
+        function closeModal(modalElement) {
+            modalElement.style.display = "none";
+            enableScrolling();
+        }
+    
+        // Open delete modal
+        deleteBtn.onclick = function(event) {
+            event.preventDefault(); 
+            openModal(deleteModal);
+        }
+    
+        // Close modals with close buttons
+        for (let closeBtn of closeDeleteBtns) {
             closeBtn.onclick = function() {
-                sampleModal.style.display = "none";
-                document.getElementById("delete-modal").style.display = "none"; // Ensure delete modal closes
-            };
-        }
-    });
-
-    // Function to open a modal
-    function openModal(modal) {
-        modal.style.display = "block";
-    }
-
-    // Close modal on window click
-    window.onclick = function(event) {
-        const modals = document.getElementsByClassName("modal");
-        for (let i = 0; i < modals.length; i++) {
-            if (event.target === modals[i]) {
-                modals[i].style.display = "none";
+                closeModal(deleteModal);
             }
         }
-    };
-</script>
     
-<script>
-    document.getElementById('save-item-btn').addEventListener('click', function(event) {
-        const itemId = this.getAttribute('data-item-id');
-        const itemSlug = '{{ object.slug }}'; 
-        const saveText = this.querySelector('.save-text');
-
-        fetch(`/collections/${itemId}/${itemSlug}/save_item/`, { 
-            method: 'POST',
-            headers: {
-                'X-CSRFToken': '{{ csrf_token }}',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ item_id: itemId })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.favorited) {
-                saveText.innerHTML = 'ALREADY SAVED';
-            } else {
-                saveText.innerHTML = 'SAVE TO PROFILE';
+        // Cancel button closes the modal
+        cancelDeleteBtn.onclick = function() {
+            closeModal(deleteModal);
+        }
+    
+        // Confirm delete action
+        confirmDeleteBtn.onclick = function() {
+            fetch("{% url 'item delete' pk=object.pk slug=object.slug %}", {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = "{% url 'item display' %}"; // Redirect after successful deletion
+                } else {
+                    console.error('Error during deletion');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target === deleteModal) {
+                closeModal(deleteModal);
             }
-        })
-        .catch(error => {
-            console.error('Error:', error);
+        }
+    </script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sampleModal = document.getElementById("sample-modal");
+            const openSampleBtn = document.getElementById("open-sample-btn");
+            const closeBtns = document.getElementsByClassName("close-btn");
+            const sampleTextContainer = document.getElementById("sample-text-container");
+            const sampleText = `{{ object.sample|escapejs }}`; // Escape the sample text for JavaScript
+            const pageSize = 500; // Adjust the number of characters per page as needed
+            let pages = [];
+            let currentPage = 0;
+    
+            // Split the sample text into pages
+            function paginateSampleText(text, pageSize) {
+                let words = text.split(' ');
+                let pagesArray = [];
+                let currentPageText = '';
+    
+                words.forEach(word => {
+                    if ((currentPageText + word + ' ').length > pageSize) {
+                        pagesArray.push(currentPageText.trim());
+                        currentPageText = word + ' ';
+                    } else {
+                        currentPageText += word + ' ';
+                    }
+                });
+    
+                if (currentPageText.trim().length > 0) {
+                    pagesArray.push(currentPageText.trim());
+                }
+    
+                return pagesArray;
+            }
+            
+            function updateSampleText() {
+                sampleTextContainer.innerHTML = `<p>${pages[currentPage]}</p>`;
+                document.getElementById("current-page").textContent = `Page ${currentPage + 1} of ${pages.length}`;
+                document.getElementById("prev-page-btn").disabled = currentPage === 0;
+                document.getElementById("next-page-btn").disabled = currentPage === pages.length - 1;
+            }
+    
+            function openSampleModal(event) {
+                event.preventDefault();
+                pages = paginateSampleText(sampleText, pageSize);
+                currentPage = 0;
+                updateSampleText();
+                openModal(sampleModal);
+            }
+    
+            document.getElementById("prev-page-btn").addEventListener("click", function() {
+                if (currentPage > 0) {
+                    currentPage--;
+                    updateSampleText();
+                }
+            });
+    
+            document.getElementById("next-page-btn").addEventListener("click", function() {
+                if (currentPage < pages.length - 1) {
+                    currentPage++;
+                    updateSampleText();
+                }
+            });
+    
+            openSampleBtn.addEventListener("click", openSampleModal);
+    
+            // Close modal functionality
+            for (const closeBtn of closeBtns) {
+                closeBtn.onclick = function() {
+                    sampleModal.style.display = "none";
+                    document.body.classList.remove("no-scroll");
+                    document.getElementById("delete-modal").style.display = "none"; // Ensure delete modal closes
+                };
+            }
+        });
+    
+        // Function to open a modal
+        function openModal(modal) {
+            modal.style.display = "block";
+            document.body.classList.add("no-scroll");
+        }
+    
+        // Close modal on window click
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName("modal");
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target === modals[i]) {
+                    modals[i].style.display = "none";
+                    document.body.classList.remove("no-scroll");
+                }
+            }
+        };
+    </script>
+        
+    <script>
+        document.getElementById('save-item-btn').addEventListener('click', function(event) {
+            const itemId = this.getAttribute('data-item-id');
+            const itemSlug = '{{ object.slug }}'; 
+            const saveText = this.querySelector('.save-text');
+    
+            fetch(`/collections/${itemId}/${itemSlug}/save_item/`, { 
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ item_id: itemId })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.favorited) {
+                    saveText.innerHTML = 'ALREADY SAVED';
+                } else {
+                    saveText.innerHTML = 'SAVE TO PROFILE';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+        
+    <script>
+        document.querySelectorAll('.star').forEach(star => {
+        star.addEventListener('click', function() {
+            const rating = this.dataset.value;
+            const stars = this.parentNode.children;
+            Array.from(stars).forEach(star => {
+                star.classList.remove('selected');
+                if (star.dataset.value <= rating) {
+                    star.classList.add('selected');
+                }
+            });
         });
     });
-</script>
-    
-<script>
-    document.querySelectorAll('.star').forEach(star => {
-    star.addEventListener('click', function() {
-        const rating = this.dataset.value;
-        const stars = this.parentNode.children;
-        Array.from(stars).forEach(star => {
-            star.classList.remove('selected');
-            if (star.dataset.value <= rating) {
-                star.classList.add('selected');
-            }
-        });
-    });
-});
-</script>
+    </script>
 {% endblock %}

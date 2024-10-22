@@ -172,3 +172,7 @@ button:hover {
     font-weight: bold;
     color: #dfe6ef;
 }
+
+.no-scroll {
+    overflow: hidden;
+}

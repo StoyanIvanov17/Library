@@ -33,7 +33,7 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="hero-image">
         {% block hero_image %}
             <img src="{% static 'images/hiker-reading-book-in-mountain.jpg' %}" alt="Nav Image">
@@ -44,12 +44,12 @@
             </div>
         {% endblock %}
     </div>
-    
+
     <div id="main-content">
         {% block main_content %}
         {% endblock %}
     </div>
-    
+
     <script>
         document.getElementById('scroll-button').addEventListener('click', function(event) {
             event.preventDefault(); // Prevent default behavior (optional if it's not a link)
@@ -57,7 +57,7 @@
             const headerOffset = 50; // Offset to compensate for the navbar height
             const elementPosition = target.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-    
+
             // Custom smooth scroll function with reduced duration
             window.scrollTo({
                 top: offsetPosition,
@@ -66,7 +66,7 @@
         });
     </script>
 
-    
+
     <script>
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
