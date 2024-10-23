@@ -2,7 +2,7 @@ from django.contrib.auth import mixins as auth_mixin
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Q
 from django.http import JsonResponse
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.views import generic as views
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
@@ -18,7 +18,12 @@ class BookCreateView(auth_mixin.LoginRequiredMixin, views.CreateView):
     queryset = Item.objects.all()
     form_class = ItemCreateForm
     template_name = 'collections/item_create.html'
-    success_url = reverse_lazy('item display')
+
+    def get_success_url(self):
+        return reverse('item detail', kwargs={
+            'pk': self.object.pk,
+            'slug': self.object.slug
+        })
 
     def get_form(self, form_class=None):
         form = super().get_form(form_class=form_class)
