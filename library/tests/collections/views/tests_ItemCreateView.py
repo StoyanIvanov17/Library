@@ -27,6 +27,7 @@ class BookCreateViewTests(TestBase):
 
     def test_get_create__when_authorized_user__expect_200(self):
         response = self.client.get(reverse('item create'))
+
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'collections/item_create.html')
 
@@ -69,6 +70,7 @@ class BookCreateViewTests(TestBase):
         self.assertIn('form', response.context)
 
         form = response.context['form']
+
         self.assertTrue(form.errors)
         self.assertIn('title', form.errors)
         self.assertEqual(form.errors['title'], ['This field is required.'])

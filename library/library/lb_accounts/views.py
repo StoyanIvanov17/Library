@@ -146,3 +146,8 @@ class AccountUpdateView(views.UpdateView):
         return reverse("account details", kwargs={
             "pk": self.object.pk,
         })
+
+
+# TODO: FINISH THIS
+class AccountDeleteView(views.DeleteView):
+    pass

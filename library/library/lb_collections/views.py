@@ -33,6 +33,7 @@ class BookCreateView(auth_mixin.LoginRequiredMixin, views.CreateView):
         return form
 
 
+# TODO: ADD TO TEST
 class ItemListView(views.ListView):
     template_name = 'collections/item_display.html'
 
@@ -64,6 +65,7 @@ class ItemListView(views.ListView):
         return context
 
 
+# TODO: ADD TO TEST
 class ItemDetailView(views.DetailView):
     queryset = Item.objects.all()
     template_name = 'collections/item_detail.html'

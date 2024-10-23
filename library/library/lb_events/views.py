@@ -29,6 +29,7 @@ class EventCreateView(views.CreateView):
         return form
 
 
+# TODO: ADD TO TEST
 def events_listed(request):
     events = Event.objects.all()
     current_datetime = timezone.now()
