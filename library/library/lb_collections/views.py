@@ -34,7 +34,7 @@ class BookCreateView(auth_mixin.LoginRequiredMixin, views.CreateView):
 
 
 # TODO: ADD TO TEST
-class ItemListView(views.ListView):
+class ItemListView(auth_mixin.LoginRequiredMixin, views.ListView):
     template_name = 'collections/item_display.html'
 
     def filter_by_genre(self, queryset):
@@ -66,7 +66,7 @@ class ItemListView(views.ListView):
 
 
 # TODO: ADD TO TEST
-class ItemDetailView(views.DetailView):
+class ItemDetailView(auth_mixin.LoginRequiredMixin, views.DetailView):
     queryset = Item.objects.all()
     template_name = 'collections/item_detail.html'
     form_class = ReviewForm
@@ -101,7 +101,7 @@ class ItemDetailView(views.DetailView):
             return JsonResponse({'success': False, 'message': 'Item not found'}, status=404)
 
 
-class ItemEditView(views.UpdateView):
+class ItemEditView(auth_mixin.LoginRequiredMixin, views.UpdateView):
     queryset = Item.objects.all()
     template_name = 'collections/item_update.html'
     form_class = ItemEditForm

@@ -6,12 +6,15 @@ from django.views import generic as views
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
 
+from django.contrib.auth import mixins as auth_mixin
+
+
 from library.lb_events.forms import EventCreateForm
 from library.lb_events.models import Event
 from library.utils.save_functionality import toggle_saved_object
 
 
-class EventCreateView(views.CreateView):
+class EventCreateView(auth_mixin.LoginRequiredMixin, views.CreateView):
     queryset = Event.objects.all()
     form_class = EventCreateForm
     template_name = 'events/event_create.html'
@@ -29,29 +32,33 @@ class EventCreateView(views.CreateView):
         return form
 
 
-# TODO: ADD TO TEST
-def events_listed(request):
-    events = Event.objects.all()
-    current_datetime = timezone.now()
-    filter_option = request.GET.get('filter', '')
+class EventListView(auth_mixin.LoginRequiredMixin, views.ListView):
+    model = Event
+    template_name = 'events/event_display.html'
+    context_object_name = 'events'
 
-    if filter_option == 'upcoming':
-        events = events.filter(date__gte=current_datetime)
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        filter_option = self.request.GET.get('filter', '')
+        current_datetime = timezone.now()
 
-    context = {
-        'events': events,
-        'filter_upcoming': filter_option,
-    }
+        if filter_option == 'upcoming':
+            queryset = queryset.filter(date__gte=current_datetime)
 
-    return render(request, 'events/event_display.html', context)
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['filter_upcoming'] = self.request.GET.get('filter', '')
+        return context
 
 
-class EventDetailView(views.DetailView):
+class EventDetailView(auth_mixin.LoginRequiredMixin, views.DetailView):
     queryset = Event.objects.all()
     template_name = 'events/event_detail.html'
 
 
-class EventEditView(views.UpdateView):
+class EventEditView(auth_mixin.LoginRequiredMixin, views.UpdateView):
     queryset = Event.objects.all()
     template_name = 'events/event_update.html'
     form_class = EventCreateForm

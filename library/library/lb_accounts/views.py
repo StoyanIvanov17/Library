@@ -1,8 +1,9 @@
 import uuid
+from django.contrib.auth import mixins as auth_mixin
+
 
 from asgiref.sync import sync_to_async
 from django.contrib import messages
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.mail import send_mail
 from django.db import IntegrityError
 from django.http import JsonResponse
@@ -106,7 +107,7 @@ class VerifyEmailView(views.View):
             return redirect('home page')
 
 
-class LibraryProfileCreateView(LoginRequiredMixin, views.UpdateView):
+class LibraryProfileCreateView(auth_mixin.LoginRequiredMixin, views.UpdateView):
     model = LibraryProfile
     form_class = LibraryProfileForm
     template_name = 'accounts/profile-registration.html'
@@ -125,7 +126,7 @@ def signout_user(request):
     return redirect('home page')
 
 
-class AccountDetailsView(views.DetailView):
+class AccountDetailsView(auth_mixin.LoginRequiredMixin, views.DetailView):
     queryset = LibraryProfile.objects.all()
     template_name = 'accounts/account_details.html'
 
@@ -137,7 +138,7 @@ class AccountDetailsView(views.DetailView):
         return context
 
 
-class AccountUpdateView(views.UpdateView):
+class AccountUpdateView(auth_mixin.LoginRequiredMixin, views.UpdateView):
     queryset = LibraryProfile.objects.all()
     template_name = 'accounts/account_update.html'
     form_class = LibraryProfileForm
