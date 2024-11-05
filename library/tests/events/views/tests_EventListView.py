@@ -3,7 +3,7 @@ from django.urls import reverse
 from django.utils import timezone
 
 from library.lb_events.models import Event
-from tests.helpers.test_image_creation import create_test_image
+from tests.helpers.image_creation import create_test_image
 
 
 class EventListedViewTest(TestCase):

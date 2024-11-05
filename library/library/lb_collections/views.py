@@ -14,7 +14,7 @@ from library.lb_collections.models import Item, Review
 from library.utils.save_functionality import toggle_saved_object
 
 
-class BookCreateView(auth_mixin.LoginRequiredMixin, views.CreateView):
+class ItemCreateView(auth_mixin.LoginRequiredMixin, views.CreateView):
     queryset = Item.objects.all()
     form_class = ItemCreateForm
     template_name = 'collections/item_create.html'
@@ -65,7 +65,6 @@ class ItemListView(auth_mixin.LoginRequiredMixin, views.ListView):
         return context
 
 
-# TODO: ADD TO TEST
 class ItemDetailView(auth_mixin.LoginRequiredMixin, views.DetailView):
     queryset = Item.objects.all()
     template_name = 'collections/item_detail.html'
@@ -78,27 +77,23 @@ class ItemDetailView(auth_mixin.LoginRequiredMixin, views.DetailView):
         return context
 
     def post(self, request, *args, **kwargs):
-        try:
-            item = self.get_object()
-            form = self.form_class(request.POST)
+        item = self.get_object()
+        form = self.form_class(request.POST)
 
-            if form.is_valid():
-                review = form.save(commit=False)
-                review.item = item
-                review.user = request.user
-                review.save()
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.item = item
+            review.user = request.user
+            review.save()
 
-                return JsonResponse({
-                    'success': True,
-                    'review_text': review.comment,
-                    'username': request.user.libraryprofile.full_name,
-                    'created_at': review.created_at.strftime('%Y-%m-%d %H:%M:%S')
-                })
+            return JsonResponse({
+                'success': True,
+                'review_text': review.comment,
+                'username': request.user.libraryprofile.full_name,
+                'created_at': review.created_at.strftime('%Y-%m-%d %H:%M:%S')
+            })
 
-            return JsonResponse({'success': False, 'errors': form.errors}, status=400)
-
-        except ObjectDoesNotExist:
-            return JsonResponse({'success': False, 'message': 'Item not found'}, status=404)
+        return JsonResponse({'success': False, 'errors': form.errors}, status=400)
 
 
 class ItemEditView(auth_mixin.LoginRequiredMixin, views.UpdateView):

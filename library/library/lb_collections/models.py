@@ -80,9 +80,11 @@ class Item(models.Model):
     def save(self, *args, **kwargs):
         if not self.isbn:
             self.isbn = generate_isbn()
+
         date_str = self.publication_date.strftime('%Y-%B-%d')
-        slug_base = f"{self.item_type}-{date_str}-{self.author}-{self.title}-{self.genre}"
+        slug_base = f"{self.item_type}-{date_str}-{self.author.name}-{self.title}-{self.genre}"
         self.slug = slugify(slug_base)
+
         super().save(*args, **kwargs)
 
     def __str__(self):

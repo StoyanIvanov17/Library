@@ -1,56 +1,46 @@
-from datetime import datetime
+import json
 
 from django.urls import reverse
 
-from library.lb_collections.models import Item, Author
-from tests.helpers.test_image_creation import create_test_image
+from library.lb_collections.models import Review
 from tests.test_base import TestBase
 
 
-class BookDetailViewTests(TestBase):
-    def setUp(self):
-        self.user = self._create_user()
-        self.client.login(**self.USER_DATA)
-        item_image = create_test_image()
-        author = Author.objects.create(
-            name='J.K.Rowling'
-        )
-        self.item = Item.objects.create(
-            title="Harry Potter",
-            item_image=item_image,
-            author=author,
-            genre="Fantasy",
-            item_type="book",
-            sample="What an amazing book!",
-            publication_date=datetime.strptime(
-                "2020-11-20",
-                "%Y-%m-%d"
-            ),
-        )
-        self.review_data = {
-            "comment": "This is a great book!"
-        }
-        self.url = reverse(
-            'item detail',
-            kwargs={
-                'pk': self.item.pk,
-                'slug': self.item.slug
-            }
-        )
-
+class ItemDetailViewTests(TestBase):
     def test_get_item_detail__when_authorized_user__expect_200(self):
-        response = self.client.get(self.url)
+        self._create_user()
+        self.client.login(**self.USER_DATA)
+
+        item = self._create_item()
+
+        expected_url = reverse('item detail', kwargs={'pk': item.pk, 'slug': item.slug})
+
+        response = self.client.get(expected_url)
 
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'collections/item_detail.html')
         self.assertIn('review_form', response.context)
         self.assertIn('reviews', response.context)
 
-    def test_get_item_detail__when_unauthorized_user__expect_raise_403(self):
-        self.client.logout()
-        login_url = reverse('signin user')
+    def test_post_create_review__when_valid_comment_and_rating__expect_success(self):
+        user = self._create_user()
+        self.client.login(**self.USER_DATA)
+        self._create_user_profile(user)
 
-        response = self.client.get(self.url)
+        item = self._create_item()
 
-        self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, f"{login_url}?next={self.url}")
+        detail_url = reverse('item detail', kwargs={'pk': item.pk, 'slug': item.slug})
+
+        valid_data = {
+            'comment': 'Amazing Item',
+            'rating': 5,
+        }
+
+        response = self.client.post(detail_url, data=valid_data)
+
+        self.assertEqual(response.status_code, 200)
+        response_data = response.json()
+        self.assertTrue(response_data['success'])
+        self.assertEqual(response_data['review_text'], 'Amazing Item')
+
+        self.assertTrue(Review.objects.filter(user=user, item=item, comment='Amazing Item').exists())

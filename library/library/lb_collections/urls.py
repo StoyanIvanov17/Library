@@ -3,7 +3,7 @@ from django.urls import path, include
 from library.lb_collections import views
 
 urlpatterns = [
-    path('create/', views.BookCreateView.as_view(), name='item create'),
+    path('create/', views.ItemCreateView.as_view(), name='item create'),
     path('display_items/', views.ItemListView.as_view(), name='item display'),
     path('<int:pk>/<slug:slug>/', include([
         path('detail/', views.ItemDetailView.as_view(), name='item detail'),
