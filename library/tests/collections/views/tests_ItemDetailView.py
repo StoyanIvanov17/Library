@@ -1,5 +1,3 @@
-import json
-
 from django.urls import reverse
 
 from library.lb_collections.models import Review

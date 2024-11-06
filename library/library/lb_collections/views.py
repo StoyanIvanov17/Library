@@ -1,5 +1,4 @@
 from django.contrib.auth import mixins as auth_mixin
-from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Q
 from django.http import JsonResponse
 from django.urls import reverse_lazy, reverse
@@ -33,7 +32,6 @@ class ItemCreateView(auth_mixin.LoginRequiredMixin, views.CreateView):
         return form
 
 
-# TODO: ADD TO TEST
 class ItemListView(auth_mixin.LoginRequiredMixin, views.ListView):
     template_name = 'collections/item_display.html'
 
