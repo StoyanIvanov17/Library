@@ -85,7 +85,6 @@ class SignUpUserView(views.CreateView):
 class VerifyEmailView(views.View):
     async def get(self, request, token):
         try:
-            # Use sync_to_async to fetch the profile and user
             profile = await sync_to_async(LibraryProfile.objects.get)(verification_token=token)
 
             user = await sync_to_async(UserModel.objects.get)(libraryprofile=profile)
@@ -97,7 +96,6 @@ class VerifyEmailView(views.View):
 
             await sync_to_async(login)(request, user)
 
-            # Use sync_to_async for messages
             await sync_to_async(messages.success)(request,
                                                   "Your email has been verified! You can now proceed to your profile.")
             return redirect('registration profile')

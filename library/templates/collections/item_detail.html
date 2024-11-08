@@ -41,7 +41,11 @@
     
             <div class="item-details-action-buttons">
                 <a href="#" id="open-sample-btn" class="item-details-sample-btn">READ A SAMPLE</a>
-                <button id="save-item-btn" data-item-id="{{ object.id }}" class="save-profile-btn">
+                <button id="save-item-btn" 
+                        data-item-id="{{ object.id }}" 
+                        data-item-slug="{{ object.slug }}" 
+                        data-csrf-token="{{ csrf_token }}"
+                        class="save-profile-btn">
                     <span class="save-text">
                         {% if object in request.user.libraryprofile.saved_items.all %}
                             ALREADY SAVED
@@ -67,7 +71,7 @@
             </div>
         
             <textarea id="id_comment" name="comment" placeholder="Write your review here..." rows="4"></textarea>
-            <button type="submit" id="submit-review-btn">Submit Review</button> <!-- Changed to "submit" -->
+            <button type="submit" id="submit-review-btn">Submit Review</button>
         </form>
     
         <div class="reviews-list" id="reviews-list">
@@ -104,7 +108,13 @@
         <h2>Delete {{ object.title }}?</h2>
         <p>Are you sure you want to delete this item?</p>
         <div class="delete-action-buttons">
-            <button id="confirm-delete-btn" class="confirm-delete">Yes, Delete</button>
+            <button id="confirm-delete-btn" 
+                    class="confirm-delete"
+                    data-item-id="{{ object.id }}"
+                    data-item-slug="{{ object.slug }}"
+                    data-csrf-token="{{ csrf_token }}">
+                Yes, Delete
+            </button>
             <button id="cancel-delete-btn" class="cancel-delete">Cancel</button>
         </div>
     </div>
@@ -115,7 +125,7 @@
         const reviewList = document.getElementById('reviews-list');
         const stars = document.querySelectorAll('.star'); // Select all star elements
         let selectedRating = 1; // Default rating
-        
+
         // Function to handle star selection
         stars.forEach(star => {
             star.addEventListener('click', function() {
@@ -123,7 +133,7 @@
                 updateStarDisplay(); // Update star display
             });
         });
-        
+
         // Function to update star display
         function updateStarDisplay() {
             stars.forEach(star => {
@@ -134,13 +144,13 @@
                 }
             });
         }
-        
+
         submitButton.addEventListener('click', function(event) {
             event.preventDefault(); // Prevent the default form submission
-        
+
             const formData = new FormData(reviewForm);
             formData.append('rating', selectedRating); // Append the selected star rating
-        
+
             fetch('{% url "item detail" pk=object.pk slug=object.slug %}', {
                 method: 'POST',
                 headers: {
@@ -160,7 +170,7 @@
                     `;
                     reviewList.prepend(newReview); // Add new review to the top
                     reviewForm.reset(); // Clear the form
-        
+
                     // Deselect stars after submission
                     selectedRating = 1; // Reset the selected rating
                     updateStarDisplay(); // Update star display to default
@@ -171,78 +181,9 @@
             .catch(error => console.error('Error:', error));
         });
     </script>
-    
-    <script>
-        const deleteModal = document.getElementById("delete-modal");
-        const deleteBtn = document.getElementById("delete-item-btn");
-        const closeDeleteBtns = document.getElementsByClassName("close-btn");
-        const cancelDeleteBtn = document.getElementById("cancel-delete-btn");
-        const confirmDeleteBtn = document.getElementById("confirm-delete-btn");
-    
-        function disableScrolling() {
-            document.body.style.overflow = "hidden";
-        }
-    
-        function enableScrolling() {
-            document.body.style.overflow = "auto";
-        }
-    
-        function openModal(modalElement) {
-            modalElement.style.display = "block";
-            disableScrolling();
-        }
-    
-        function closeModal(modalElement) {
-            modalElement.style.display = "none";
-            enableScrolling();
-        }
-    
-        // Open delete modal
-        deleteBtn.onclick = function(event) {
-            event.preventDefault(); 
-            openModal(deleteModal);
-        }
-    
-        // Close modals with close buttons
-        for (let closeBtn of closeDeleteBtns) {
-            closeBtn.onclick = function() {
-                closeModal(deleteModal);
-            }
-        }
-    
-        // Cancel button closes the modal
-        cancelDeleteBtn.onclick = function() {
-            closeModal(deleteModal);
-        }
-    
-        // Confirm delete action
-        confirmDeleteBtn.onclick = function() {
-            fetch("{% url 'item delete' pk=object.pk slug=object.slug %}", {
-                method: 'POST',
-                headers: {
-                    'X-CSRFToken': '{{ csrf_token }}'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    window.location.href = "{% url 'item display' %}"; // Redirect after successful deletion
-                } else {
-                    console.error('Error during deletion');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        }
-    
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            if (event.target === deleteModal) {
-                closeModal(deleteModal);
-            }
-        }
-    </script>
-    
+
+    <script src="{% static 'js/item-delete.js' %}"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const sampleModal = document.getElementById("sample-modal");
@@ -253,13 +194,13 @@
             const pageSize = 500; // Adjust the number of characters per page as needed
             let pages = [];
             let currentPage = 0;
-    
+
             // Split the sample text into pages
             function paginateSampleText(text, pageSize) {
                 let words = text.split(' ');
                 let pagesArray = [];
                 let currentPageText = '';
-    
+
                 words.forEach(word => {
                     if ((currentPageText + word + ' ').length > pageSize) {
                         pagesArray.push(currentPageText.trim());
@@ -268,21 +209,21 @@
                         currentPageText += word + ' ';
                     }
                 });
-    
+
                 if (currentPageText.trim().length > 0) {
                     pagesArray.push(currentPageText.trim());
                 }
-    
+
                 return pagesArray;
             }
-            
+
             function updateSampleText() {
                 sampleTextContainer.innerHTML = `<p>${pages[currentPage]}</p>`;
                 document.getElementById("current-page").textContent = `Page ${currentPage + 1} of ${pages.length}`;
                 document.getElementById("prev-page-btn").disabled = currentPage === 0;
                 document.getElementById("next-page-btn").disabled = currentPage === pages.length - 1;
             }
-    
+
             function openSampleModal(event) {
                 event.preventDefault();
                 pages = paginateSampleText(sampleText, pageSize);
@@ -290,23 +231,23 @@
                 updateSampleText();
                 openModal(sampleModal);
             }
-    
+
             document.getElementById("prev-page-btn").addEventListener("click", function() {
                 if (currentPage > 0) {
                     currentPage--;
                     updateSampleText();
                 }
             });
-    
+
             document.getElementById("next-page-btn").addEventListener("click", function() {
                 if (currentPage < pages.length - 1) {
                     currentPage++;
                     updateSampleText();
                 }
             });
-    
+
             openSampleBtn.addEventListener("click", openSampleModal);
-    
+
             // Close modal functionality
             for (const closeBtn of closeBtns) {
                 closeBtn.onclick = function() {
@@ -316,13 +257,13 @@
                 };
             }
         });
-    
+
         // Function to open a modal
         function openModal(modal) {
             modal.style.display = "block";
             document.body.classList.add("no-scroll");
         }
-    
+
         // Close modal on window click
         window.onclick = function(event) {
             const modals = document.getElementsByClassName("modal");
@@ -334,35 +275,7 @@
             }
         };
     </script>
-        
-    <script>
-        document.getElementById('save-item-btn').addEventListener('click', function(event) {
-            const itemId = this.getAttribute('data-item-id');
-            const itemSlug = '{{ object.slug }}'; 
-            const saveText = this.querySelector('.save-text');
-    
-            fetch(`/collections/${itemId}/${itemSlug}/save_item/`, { 
-                method: 'POST',
-                headers: {
-                    'X-CSRFToken': '{{ csrf_token }}',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ item_id: itemId })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.favorited) {
-                    saveText.innerHTML = 'ALREADY SAVED';
-                } else {
-                    saveText.innerHTML = 'SAVE TO PROFILE';
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        });
-    </script>
-        
+    <script src="{% static 'js/item-save.js' %}"></script>
     <script>
         document.querySelectorAll('.star').forEach(star => {
         star.addEventListener('click', function() {

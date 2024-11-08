@@ -31,36 +31,6 @@
         <p>Please check your email for a verification link to complete your registration.</p>
     </div>
 </div>
-
-    <script>
-        document.querySelector('.log_reg_form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        const formData = new FormData(this);
-        
-        fetch(this.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest',
-                'X-CSRFToken': '{{ csrf_token }}',
-            },
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                const modal = document.getElementById('verificationModal');
-                modal.style.display = 'block';
-                document.querySelector('.verification-modal-content p').innerText = data.message;
-            } else {
-                alert(data.message);
-            }
-        })
-        .catch(error => console.error('Error:', error));
-    });
-        document.getElementById('closeModal').addEventListener('click', function() {
-        document.getElementById('verificationModal').style.display = 'none';
-    });
-    </script>
+<script src="{% static 'js/register.js' %}"></script>
 </body>
 </html>
