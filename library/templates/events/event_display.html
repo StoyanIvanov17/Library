@@ -16,23 +16,26 @@
 
 {% block main_content %}
     <h1 class="show-collection-title-main">OUR OUTDOOR GATHERINGS</h1>
-    
     <div class="page-container">
         <div class="search-filter-container">
+        
             <form method="GET" action="{% url 'event display' %}">
                 <label>
                     <input type="radio" name="filter" value="upcoming" {% if filter_upcoming == 'upcoming' %}checked{% endif %}>
                     Upcoming Events
                 </label>
+            
                 <label>
                     <input type="radio" name="filter" value="all" {% if filter_upcoming == 'all' %}checked{% endif %}>
                     All Events
                 </label>
+            
                 <button type="submit" class="filter-button">Filter</button>
             </form>
         </div>
     
         <div class="event-container">
+        
             {% for event in events %}
                 <div class="event-item">
                     <div class="event-content">
@@ -41,8 +44,11 @@
                         <p class="event-location">{{ event.location }}</p>
                         <p class="event-age-group">Age Group: {{ event.age_group }}</p>
                         <p class="event-description">{{ event.description|truncatewords:20 }}</p>
-                        <a href="{% url 'event detail' pk=event.pk slug=event.slug %}" class="event-detail-link">Event Details</a>
+                        <a href="{% url 'event detail' pk=event.pk slug=event.slug %}" 
+                           class="event-detail-link">Event Details
+                        </a>
                     </div>
+                    
                     <div class="event-image">
                         <img src="{{ event.event_image.url }}" alt="{{ event.name }}">
                     </div>

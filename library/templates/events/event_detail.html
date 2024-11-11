@@ -5,7 +5,11 @@
     {% block hero_image %}
         <img src="{{ event.event_image.url }}" alt="Nav Image">
         <div class="hero-text">
-            <div class="hero-button" id="scroll-button">ABOUT THE EVENT<i class="fas fa-arrow-down down-arrow"></i></div>
+            <div class="hero-button" 
+                 id="scroll-button">
+                ABOUT THE EVENT
+                <i class="fas fa-arrow-down down-arrow"></i>
+            </div>
         </div>
     {% endblock %}
 </div>
@@ -14,14 +18,18 @@
 <div class="event-detail-container">
     <div class="event-detail-content">
          <div class="item-details-action-buttons">
+         
            {% if user.is_superuser %}
                <a href="{% url 'event edit' pk=object.pk slug=object.slug %}" class="item-details-edit">Edit</a>
-               <a href="#" id="delete-item-btn" class="item-details-remove">Delete</a>           {% endif %}
+               <a href="#" id="delete-item-btn" class="item-details-remove">Delete</a>
+           {% endif %}
+         
            <button id="save-item-btn"
                    data-item-id="{{ object.id }}"
                    data-item-slug="{{ object.slug }}"
                    data-csrf-token="{{ csrf_token }}"
                    class="save-profile-btn">
+           
                <span class="save-text">
                    {% if object in request.user.libraryprofile.saved_events.all %}
                        ALREADY JOINED
@@ -33,8 +41,6 @@
        </div>
 
         <h1 class="event-detail-title">{{ event.name }}</h1>
-
-        <!-- Separator line -->
         <hr class="event-detail-separator">
 
         <div class="event-detail-info">
@@ -56,6 +62,7 @@
         <h2>Delete {{ object.name }}?</h2>
         <p>Are you sure you want to delete this item?</p>
         <div class="delete-action-buttons">
+            
             <button id="confirm-delete-btn"
                     class="confirm-delete"
                     data-item-id="{{ object.id }}"

@@ -5,15 +5,23 @@
     <div class="item-create-form-container">
         <div class="item-create-form-section">
             <h2 class="item-create-form-title">Create a New Item</h2>
-            <form action="{% url 'item create' %}" method="post" enctype="multipart/form-data" class="item-create-form">
+            
+            <form action="{% url 'item create' %}" 
+                  method="post" 
+                  enctype="multipart/form-data" 
+                  class="item-create-form">
+                
                 {% csrf_token %}
+                
                 <div class="item-create-form-group">
                     {{ form }}
                 </div>
+                
                 <button type="submit" class="item-create-submit-button">Create Item</button>
                 <button type="button" onclick="history.back()" class="item-create-back-button">Go Back</button>
             </form>
         </div>
+        
         <div class="item-create-image-section">
             <img src="{% static 'images/register-photo.jpg' %}" alt="Book Image" class="item-create-book-image">
         </div>

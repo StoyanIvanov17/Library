@@ -12,17 +12,38 @@
         <div class="navbar-container">
             <a href="{% url 'home page' %}" class="navbar-logo">MyLibrary</a>
             <div class="navbar-buttons">
+            
             {% if user.is_authenticated %}
                 <ul class="navbar-menu">
                     {% if user.is_superuser or user.is_staff %}
-                        <li class="navbar-item"><a href="{% url 'item create' %}" class="navbar-link">Create Item</a></li>
-                        <li class="navbar-item"><a href="{% url 'event create' %}" class="navbar-link">Create Event</a></li>
+                        <li class="navbar-item">
+                            <a href="{% url 'item create' %}" class="navbar-link">Create Item</a>
+                        </li>
+                        
+                        <li class="navbar-item">
+                            <a href="{% url 'event create' %}" class="navbar-link">Create Event</a>
+                        </li>
                     {% endif %}
-                    <li class="navbar-item"><a href="{% url 'home page' %}" class="navbar-link">Home</a></li>
-                    <li class="navbar-item"><a href="{% url 'account details' pk=user.pk %}" class="navbar-link">My Account</a></li>
-                    <li class="navbar-item"><a href="{% url 'item display' %}" class="navbar-link">Collections</a></li>
-                    <li class="navbar-item"><a href="{% url 'event display' %}" class="navbar-link">Events</a></li>
-                    <li class="navbar-item"><a href="{% url 'signout user' %}" class="navbar-link">Log out</a></li>
+                
+                    <li class="navbar-item">
+                        <a href="{% url 'home page' %}" class="navbar-link">Home</a>
+                    </li>
+                
+                    <li class="navbar-item">
+                        <a href="{% url 'account details' pk=user.pk %}" class="navbar-link">My Account</a>
+                    </li>
+                
+                    <li class="navbar-item">
+                        <a href="{% url 'item display' %}" class="navbar-link">Collections</a>
+                    </li>
+                
+                    <li class="navbar-item">
+                        <a href="{% url 'event display' %}" class="navbar-link">Events</a>
+                    </li>
+                
+                    <li class="navbar-item">
+                        <a href="{% url 'signout user' %}" class="navbar-link">Log out</a>
+                    </li>
                 </ul>
             {% else %}
                 <div class="navbar-buttons">
@@ -40,7 +61,9 @@
             <div class="hero-text">
                 <h1>A PLACE FOR EVERYBODY</h1>
                 <p>BOOKS & AUDIO BOOKS & DVDS & MAGAZINES</p>
-                <div class="hero-button" id="scroll-button">BEGIN<i class="fas fa-arrow-down down-arrow"></i></div>
+                <div class="hero-button" 
+                     id="scroll-button">BEGIN<i class="fas fa-arrow-down down-arrow"></i>
+                </div>
             </div>
         {% endblock %}
     </div>

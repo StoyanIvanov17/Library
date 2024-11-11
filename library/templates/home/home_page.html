@@ -3,23 +3,26 @@
 {% block main_content %}
 
 <div class="main-content">
-    <!-- Featured Section -->
     <section class="home-page-featured-section">
         <h2>Welcome to MyLibrary</h2>
         <p>Your go-to destination for books, audiobooks, DVDs, and more!</p>
+        
         <div class="home-page-featured-content">
+            
             <div class="home-page-feature-item">
                 <img src="{% static 'images/candle-inscription-books-compass.jpg' %}" alt="New Arrivals">
                 <h3>New Arrivals</h3>
                 <p>Check out the latest additions to our collection.</p>
                 <a href="#" class="btn">Browse</a>
             </div>
+            
             <div class="home-page-feature-item">
                 <img src="{% static 'images/open-book-with-natural-element.jpg' %}" alt="Events">
                 <h3>Upcoming Events</h3>
                 <p>Join us for book readings, workshops, and more.</p>
                 <a href="{% url 'event display' %}?filter=upcoming" class="btn">Explore</a>
             </div>
+            
             <div class="home-page-feature-item">
                 <img src="{% static 'images/register-photo.jpg' %}" alt="Kids Corner">
                 <h3>Kids' Corner</h3>
@@ -28,21 +31,23 @@
             </div>
         </div>
     </section>
-
-    <!-- Collection Highlights -->
+    ->
     <section class="home-page-collection-highlights">
         <h2>Collections</h2>
         <div class="home-page-collection-gallery">
+            
             <div class="home-page-collection-item">
                 <img src="{% static 'images/collections-background.jpg' %}" alt="Books">
                 <h4>Books</h4>
                 <a href="{% url 'item display' %}?item_type=book" class="btn small">Browse</a>
             </div>
+            
             <div class="home-page-collection-item">
                 <img src="{% static 'images/librarian.jpg' %}" alt="Audiobooks">
                 <h4>Audiobooks</h4>
                 <a href="{% url 'item display' %}?item_type=audiobook" class="btn small">Browse</a>
             </div>
+            
             <div class="home-page-collection-item">
                 <img src="{% static 'images/background_collections.png' %}" alt="Magazines">
                 <h4>Magazines</h4>
@@ -50,14 +55,15 @@
             </div>
         </div>
     </section>
-
-    <!-- Testimonials or Announcements -->
+    
     <section class="home-page-testimonials">
         <h2>What Our Members Are Saying</h2>
+        
         <div class="home-page-testimonial">
             <p>"The library's collection is amazing! I found books that I couldn't find anywhere else."</p>
             <span>- Library Member</span>
         </div>
+        
         <div class="home-page-testimonial">
             <p>"The events are fun and engaging! It's a great way to spend an afternoon."</p>
             <span>- Library Member</span>
