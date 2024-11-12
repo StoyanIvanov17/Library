@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalTitle = document.querySelector('.profile-modal-title');
     const modalLink = document.querySelector('.profile-modal-link');
 
-    // Function to open modal
     function openModal(title, image, link) {
         modal.style.display = "flex";
         modalTitle.textContent = title;
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.add("no-scroll");
     }
 
-    // Add click event to each item
     items.forEach(item => {
         item.addEventListener('click', function () {
             const [id, title, link, image] = item.dataset.item.split('|');
@@ -24,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Add click event to each event
     events.forEach(event => {
         event.addEventListener('click', function () {
             const [id, title, link, image] = event.dataset.event.split('|');
@@ -32,13 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Close modal
     closeBtn.addEventListener('click', function () {
         modal.style.display = "none";
         document.body.classList.remove("no-scroll");
     });
 
-    // Close modal when clicking outside
     window.addEventListener('click', function (e) {
         if (e.target === modal) {
             modal.style.display = "none";

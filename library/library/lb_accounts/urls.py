@@ -12,5 +12,6 @@ urlpatterns = [
     path('myaccount/<int:pk>/', include([
         path('', views.AccountDetailsView.as_view(), name='account details'),
         path('edit/', views.AccountUpdateView.as_view(), name='account edit'),
+        path('delete/', views.AccountDeleteView.as_view(), name='account delete'),
     ]))
 ]

@@ -6,13 +6,16 @@
     <div class="hero-text">
         <h1>WELCOME TO YOUR PROFILE</h1>
         <p>SAVE & KEEP TRACK OF THINGS YOU ENJOY</p>
-        <div class="hero-button" id="scroll-button">PROFILE<i class="fas fa-arrow-down down-arrow"></i></div>
+        <div class="hero-button" 
+             id="scroll-button">
+            PROFILE
+            <i class="fas fa-arrow-down down-arrow"></i>
+        </div>
     </div>
 {% endblock %}
 
 {% block main_content %}
 <div class="profile-wrapper">
-    <!-- Sidebar with Profile Info -->
     <aside class="profile-sidebar">
         <div class="profile-info">
             {% if object.profile_picture %}
@@ -33,7 +36,7 @@
             <ul>
                 {% if object.first_name %}
                     <li><a href="{% url 'account edit' pk=object.pk %}">Edit Profile</a></li>
-                    <li><a href="#">Delete Profile</a></li>
+                    <li><a href="#" id="profile-delete-link">Delete Profile</a></li>
                 {% else %}
                     <li><a href="{% url 'registration profile' %}">Finish Your Profile</a></li>
                 {% endif %}
@@ -41,13 +44,15 @@
         </nav>
     </aside>
 
-    <!-- Main Content Section for Saved Items and Events -->
     <section class="profile-main-content">
         <div class="saved-items">
             <h1>My Saved Items</h1>
             {% for item in saved_items %}
                 <div class="profile-item" 
-                    data-item="{{ item.id }}|{{ item.title }}|{% url 'item detail' pk=item.pk slug=item.slug %}|{{ item.item_image.url }}">
+                    data-item="{{ item.id }}
+                    |{{ item.title }}
+                    |{% url 'item detail' pk=item.pk slug=item.slug %}
+                    |{{ item.item_image.url }}">
                     <p>{{ item.title }}</p>
                 </div>
             {% endfor %}
@@ -56,14 +61,16 @@
             <h1>My Saved Events</h1>
             {% for event in saved_events %}
                 <div class="profile-event" 
-                    data-event="{{ event.id }}|{{ event.name }}|{% url 'event detail' pk=event.pk slug=event.slug %}|{{ event.event_image.url }}">
+                    data-event="{{ event.id }}
+                    |{{ event.name }}
+                    |{% url 'event detail' pk=event.pk slug=event.slug %}
+                    |{{ event.event_image.url }}">
                     <p>{{ event.name }}</p>
                 </div>
             {% endfor %}
         </div>
     </section>
 
-    <!-- Modal for Displaying Item/Event Details -->
     <div id="profile-modal" class="profile-modal">
         <div class="profile-modal-content">
             <span class="profile-close">&times;</span>
@@ -74,6 +81,23 @@
             </a>
         </div>
     </div>
+
+    <div id="profile-deletion-modal" class="profile-deletion-modal">
+        <div class="profile-deletion-modal-content">
+            <span class="profile-deletion-close">&times;</span>
+            <h2>Are you sure you want to delete your profile?</h2>
+            <p>This action cannot be undone.</p>
+            <form id="profile-deletion-form" method="post" action="{% url 'account delete' pk=object.pk %}">
+                {% csrf_token %}
+                <button type="submit" class="profile-deletion-confirm">Yes, Delete</button>
+                <button type="button" class="profile-deletion-cancel">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+
 </div>
     <script src="{% static 'js/profile.js' %}"></script>
+    <script src="{% static 'js/profile-delete.js' %}"></script>
+
 {% endblock %}

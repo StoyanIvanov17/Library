@@ -23,29 +23,25 @@ document.addEventListener("DOMContentLoaded", function() {
         enableScrolling();
     }
 
-    // Open delete modal
     deleteBtn.onclick = function (event) {
         event.preventDefault();
         openModal(deleteModal);
     }
 
-    // Close modals with close buttons
     for (let closeBtn of closeDeleteBtns) {
         closeBtn.onclick = function () {
             closeModal(deleteModal);
         }
     }
 
-    // Cancel button closes the modal
     cancelDeleteBtn.onclick = function () {
         closeModal(deleteModal);
     }
 
-    // Confirm delete action
     confirmDeleteBtn.onclick = function () {
-        const csrfToken = confirmDeleteBtn.getAttribute('data-csrf-token');  // Get CSRF token
-        const itemId = confirmDeleteBtn.getAttribute('data-item-id'); // Get item ID
-        const itemSlug = confirmDeleteBtn.getAttribute('data-item-slug'); // Get item slug
+        const csrfToken = confirmDeleteBtn.getAttribute('data-csrf-token');
+        const itemId = confirmDeleteBtn.getAttribute('data-item-id');
+        const itemSlug = confirmDeleteBtn.getAttribute('data-item-slug');
         const redirectUrl = "/collections/display_items/";
 
         fetch(`/collections/${itemId}/${itemSlug}/delete/`, {
@@ -56,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
             .then(response => {
                 if (response.ok) {
-                    window.location.href = redirectUrl; // Redirect after successful deletion
+                    window.location.href = redirectUrl;
                 } else {
                     console.error('Error during deletion');
                 }
@@ -66,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     }
 
-    // Close modal when clicking outside
     window.onclick = function (event) {
         if (event.target === deleteModal) {
             closeModal(deleteModal);

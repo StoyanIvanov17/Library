@@ -147,6 +147,8 @@ class AccountUpdateView(auth_mixin.LoginRequiredMixin, views.UpdateView):
         })
 
 
-# TODO: FINISH THIS
 class AccountDeleteView(views.DeleteView):
-    pass
+    def post(self, request, *args, **kwargs):
+        user = request.user
+        user.delete()
+        return redirect(reverse_lazy('home page'))
