@@ -3,7 +3,6 @@ import uuid
 from django.db import models
 from django.contrib.auth import models as auth_models
 from django.utils import timezone
-from django.utils.translation import gettext_lazy as _
 
 from library.core.validators import MaxFileSizeValidator
 from library.lb_accounts.managers import LibraryUserManager
@@ -13,15 +12,14 @@ class LibraryUser(auth_models.AbstractBaseUser, auth_models.PermissionsMixin):
     LIBRARY_CARD_NUMBER_LENGTH = 15
 
     email = models.EmailField(
-        _("email address"),
+        max_length=30,
         unique=True,
         error_messages={
-            "unique": _("A user with that email address already exists."),
+            "unique": "A user with that email already exists.",
         },
     )
 
     date_joined = models.DateTimeField(
-        _("date joined"),
         default=timezone.now
     )
 
@@ -54,6 +52,9 @@ class LibraryProfile(models.Model):
     email = models.EmailField(
         max_length=30,
         unique=True,
+        error_messages={
+            "unique": "A user with that email already exists.",
+        },
     )
 
     first_name = models.CharField(

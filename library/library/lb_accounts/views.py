@@ -5,9 +5,7 @@ from django.contrib.auth import mixins as auth_mixin
 from asgiref.sync import sync_to_async
 from django.contrib import messages
 from django.core.mail import send_mail
-from django.db import IntegrityError
-from django.http import JsonResponse
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 from django.urls import reverse_lazy, reverse
 from django.views import generic as views
 from django.contrib.auth import views as auth_views, login, logout, get_user_model
@@ -42,41 +40,27 @@ class SignUpUserView(views.CreateView):
         user.library_card_number = generate_library_card_number()
         user.is_active = False
 
-        try:
+        user.save()
 
-            user.save()
+        profile = LibraryProfile.objects.create(
+            user=user,
+            email=user.email,
+            verification_token=uuid.uuid4(),
+        )
 
-            profile = LibraryProfile.objects.create(
-                user=user,
-                email=user.email,
-                verification_token=uuid.uuid4(),
-            )
+        profile.save()
 
-            profile.save()
+        verification_url = self.request.build_absolute_uri(
+            reverse('verify_email', kwargs={'token': str(profile.verification_token)}))
+        send_mail(
+            subject="Welcome to the Library!",
+            message=f"Please verify your email by clicking the following link: {verification_url}",
+            from_email="freakyjackals@gmail.com",
+            recipient_list=[user.email],
+            fail_silently=False,
+        )
 
-            verification_url = self.request.build_absolute_uri(
-                reverse('verify_email', kwargs={'token': str(profile.verification_token)})
-            )
-
-            send_mail(
-                subject="Welcome to the Library!",
-                message=f"Please verify your email by clicking the following link: {verification_url}",
-                from_email="freakyjackals@gmail.com",
-                recipient_list=[user.email],
-                fail_silently=False,
-            )
-
-            return JsonResponse({
-                'success': True,
-                'message': "Please check your email for a verification link to complete your registration."
-            })
-
-        except IntegrityError:
-            profile = LibraryProfile.objects.get(user=user)
-            return JsonResponse({
-                'success': False,
-                'message': "An account already exists for this email. Please log in."
-            })
+        return render(self.request, 'accounts/user_confirmation.html')
 
     def get_success_url(self):
         return self.success_url

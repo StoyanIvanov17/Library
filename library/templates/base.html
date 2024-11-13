@@ -15,7 +15,7 @@
             
             {% if user.is_authenticated %}
                 <ul class="navbar-menu">
-                    {% if user.is_superuser or user.is_staff %}
+                    {% if user.is_superuser%}
                         <li class="navbar-item">
                             <a href="{% url 'item create' %}" class="navbar-link">Create Item</a>
                         </li>

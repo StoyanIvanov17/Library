@@ -29,7 +29,9 @@
             <div class="admin-action-buttons">
                 {% if user.is_superuser %}
                     <a href="{% url 'item edit' pk=object.pk slug=object.slug %}" class="item-details-edit">Edit</a>
-                    <a href="#" id="delete-item-btn" class="item-details-remove">Delete</a>                
+                    <a href="#" id="delete-item-btn" class="item-details-remove">Delete</a>
+                {% elif user.is_staff %}
+                    <a href="{% url 'item edit' pk=object.pk slug=object.slug %}" class="item-details-edit">Edit</a>
                 {% endif %}
             </div>
         
