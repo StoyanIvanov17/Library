@@ -5,32 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3487039d-45c7-437a-929a-29e1de615454" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/library/lb_accounts/migrations/0003_alter_libraryprofile_email.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/lb_accounts/migrations/0004_alter_libraryprofile_email.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/lb_accounts/migrations/0005_alter_libraryprofile_email_alter_libraryuser_email.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a1ebdb36-e606-40ff-b29f-20b4df5a931b.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a1ebdb36-e606-40ff-b29f-20b4df5a931b/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/lb_accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_accounts/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/lb_accounts/managers.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_accounts/managers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/lb_accounts/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_accounts/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/lb_accounts/migrations/0002_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_accounts/migrations/0002_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/lb_accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/lb_accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_accounts/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/lb_accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/lb_collections/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_collections/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/lb_events/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_events/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/login_register.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/login_register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/js/register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/accounts/signup_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/signup_user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/collections/item_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/collections/item_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/collections/item_display.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/collections/item_display.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/home_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/user_confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/user_confirmation.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,10 +22,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -77,67 +56,67 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.library.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_BookCreateView.BookCreateViewTests.test_get_create__when_authorized_user__expect_200.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_authorized_user__expect_200.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_authorized_user__expect_200_and_correct_template.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_unauthorized_user__expect_302_redirect_to_login.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_unauthorized_user__expect_raise_403.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_success_url__when_valid_item__expect_correct_url.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_authorized_user__expect_302_and_redirect_to_item_collections.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_authorized_user__expect_302_and_redirect_to_item_details.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_invalid_data__expect_form_errors.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_item_created_for_logged_in_user.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_unauthorized_user__expect_redirect_to_login.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_valid_data__expect_item_created.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_valid_login_data__expect_item_created.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemCreateView.ItemCreateViewTests.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemCreateView.ItemCreateViewTests.test_post_create__when_invalid_data__expect_form_errors.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemCreateView.ItemCreateViewTests.test_post_create__when_valid_data__expect_item_created.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_get_create__when_authorized_user__expect_200.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_get_item_detail__when_authorized_user__expect_200.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_get_item_detail__when_unauthorized_user__expect_raise_403.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_post_review__when_valid_data__expect_review_created.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_post_review__when_valid_data__expect_success_response.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_post_valid_review.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.test_get_item_detail__when_authorized_user__expect_200.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.test_get_item_detail__when_unauthorized_user__expect_raise_403.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.test_post_create_review__when_invalid_data__expect_form_errors.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.test_post_create_review__when_valid_comment_and_rating__expect_success.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_context_data_in_item_list_view.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_both_filters.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_item_type_filter.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_with_genre_filter.executor": "Run",
-    "Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_without_filters.executor": "Run",
-    "Django tests.Test: tests.events.views.tests_EventListView.EventListedViewTest.executor": "Run",
-    "Python.views.executor": "Debug",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/freak/Library/library/staticfiles/images",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.library.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_BookCreateView.BookCreateViewTests.test_get_create__when_authorized_user__expect_200.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_authorized_user__expect_200.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_authorized_user__expect_200_and_correct_template.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_unauthorized_user__expect_302_redirect_to_login.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_unauthorized_user__expect_raise_403.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_success_url__when_valid_item__expect_correct_url.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_authorized_user__expect_302_and_redirect_to_item_collections.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_authorized_user__expect_302_and_redirect_to_item_details.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_invalid_data__expect_form_errors.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_item_created_for_logged_in_user.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_unauthorized_user__expect_redirect_to_login.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_valid_data__expect_item_created.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_valid_login_data__expect_item_created.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.ItemCreateViewTests.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.ItemCreateViewTests.test_post_create__when_invalid_data__expect_form_errors.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.ItemCreateViewTests.test_post_create__when_valid_data__expect_item_created.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_get_create__when_authorized_user__expect_200.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_get_item_detail__when_authorized_user__expect_200.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_get_item_detail__when_unauthorized_user__expect_raise_403.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_post_review__when_valid_data__expect_review_created.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_post_review__when_valid_data__expect_success_response.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_post_valid_review.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.test_get_item_detail__when_authorized_user__expect_200.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.test_get_item_detail__when_unauthorized_user__expect_raise_403.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.test_post_create_review__when_invalid_data__expect_form_errors.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.test_post_create_review__when_valid_comment_and_rating__expect_success.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_context_data_in_item_list_view.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_both_filters.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_item_type_filter.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_with_genre_filter.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_without_filters.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.events.views.tests_EventListView.EventListedViewTest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.views.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/freak/Library/library/staticfiles/images&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\freak\Library\library\staticfiles\images" />
@@ -531,7 +510,9 @@
       <workItem from="1731441478506" duration="1882000" />
       <workItem from="1731499752484" duration="8053000" />
       <workItem from="1731509984561" duration="4571000" />
-      <workItem from="1731514581167" duration="4441000" />
+      <workItem from="1731514581167" duration="4710000" />
+      <workItem from="1731523166802" duration="1014000" />
+      <workItem from="1731602088093" duration="2320000" />
     </task>
     <servers />
   </component>

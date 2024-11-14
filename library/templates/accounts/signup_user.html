@@ -13,7 +13,7 @@
     <div class="log_reg_body_overlay"></div>
     <div class="log_reg_body_register">
         <h1>Register</h1>
-        <form class="log_reg_form" action="{% url 'signup user' %}" method="POST">
+        <form id="registerForm" class="log_reg_form" action="{% url 'signup user' %}" method="POST">
             {% csrf_token %}
             {{ form.email|placeholder:"Email" }}
             {{ form.email.errors }}
@@ -28,14 +28,5 @@
             <p>Already have an account? <a href="{% url 'signin user' %}">Log in</a></p>
         </form>
     </div>
-    
-    <div id="verificationModal" class="verification-modal" style="display: none;">
-    <div class="verification-modal-content">
-        <span class="verification-close-button" id="closeModal">&times;</span>
-        {% csrf_token %}
-        <h2>Email Verification Pending</h2>
-        <p>Please check your email for a verification link to complete your registration.</p>
-    </div>
-</div>
 </body>
 </html>

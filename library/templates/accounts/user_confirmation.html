@@ -1,10 +1,37 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful!</title>
+    <link rel="stylesheet" href="{% static 'css/confirmation.css' %}">
 </head>
 <body>
-    <h1>please check your email for further confirmation</h1>
+
+    <div class="confirmation-background">
+        <div class="confirmation-bubble"></div>
+        <div class="confirmation-bubble"></div>
+        <div class="confirmation-bubble"></div>
+        <div class="confirmation-bubble"></div>
+        <div class="confirmation-bubble"></div>
+    </div>
+
+    <div class="confirmation-loading-screen">
+        <div class="confirmation-loading-content">
+            <div class="confirmation-envelope-animation">
+                <div class="confirmation-envelope">
+                    <div class="confirmation-envelope-flap"></div>
+                </div>
+            </div>
+            <h1>You're Almost There!</h1>
+            <p>We've sent you an email to confirm your registration.<br>
+                Please check your inbox and click the confirmation link to continue.</p>
+            <div class="confirmation-loading-dots">
+                <span>.</span><span>.</span><span>.</span>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
