@@ -10,6 +10,7 @@ from rest_framework.views import APIView
 
 from library.lb_collections.forms import ItemCreateForm, ItemEditForm, ReviewForm
 from library.lb_collections.models import Item, Review
+
 from library.utils.save_functionality import toggle_saved_object
 
 
@@ -70,6 +71,7 @@ class ItemDetailView(auth_mixin.LoginRequiredMixin, views.DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+
         context['review_form'] = self.form_class()
         context['reviews'] = Review.objects.filter(item=self.get_object())
         return context

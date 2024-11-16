@@ -68,25 +68,18 @@ class SignUpUserView(views.CreateView):
 
 class VerifyEmailView(views.View):
     async def get(self, request, token):
-        try:
-            profile = await sync_to_async(LibraryProfile.objects.get)(verification_token=token)
+        profile = await sync_to_async(LibraryProfile.objects.get)(verification_token=token)
 
-            user = await sync_to_async(UserModel.objects.get)(libraryprofile=profile)
-            user.is_active = True
-            await sync_to_async(user.save)()
+        user = await sync_to_async(UserModel.objects.get)(libraryprofile=profile)
+        user.is_active = True
+        await sync_to_async(user.save)()
 
-            profile.verified = True
-            await sync_to_async(profile.save)()
+        profile.verified = True
+        await sync_to_async(profile.save)()
 
-            await sync_to_async(login)(request, user)
+        await sync_to_async(login)(request, user)
 
-            await sync_to_async(messages.success)(request,
-                                                  "Your email has been verified! You can now proceed to your profile.")
-            return redirect('registration profile')
-
-        except LibraryProfile.DoesNotExist:
-            await sync_to_async(messages.error)(request, "Invalid verification link.")
-            return redirect('home page')
+        return redirect('registration profile')
 
 
 class LibraryProfileCreateView(auth_mixin.LoginRequiredMixin, views.UpdateView):

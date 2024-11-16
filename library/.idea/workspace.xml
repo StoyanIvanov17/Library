@@ -7,9 +7,9 @@
     <list default="true" id="3487039d-45c7-437a-929a-29e1de615454" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/lb_accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/signup_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/signup_user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/user_confirmation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/user_confirmation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/lb_collections/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_collections/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/account_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/account_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/collections/item_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/collections/item_detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +23,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Python Script" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -512,7 +512,9 @@
       <workItem from="1731509984561" duration="4571000" />
       <workItem from="1731514581167" duration="4710000" />
       <workItem from="1731523166802" duration="1014000" />
-      <workItem from="1731602088093" duration="2320000" />
+      <workItem from="1731602088093" duration="2509000" />
+      <workItem from="1731766316057" duration="87000" />
+      <workItem from="1731766410384" duration="1951000" />
     </task>
     <servers />
   </component>

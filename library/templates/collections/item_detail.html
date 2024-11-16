@@ -69,48 +69,52 @@
         </div>
     </div>
 
-    <div class="review-section">
-        <h3>Reviews</h3>
-    
-        <form id="review-form" 
-              class="review-form" 
-              method="post" 
-              action="{% url 'item detail' pk=object.pk slug=object.slug %}">
-            {% csrf_token %}
+    {% if request.user.libraryprofile.first_name %}
+        <div class="review-section">
+            <h3>Reviews</h3>
         
-            <label for="id_rating">Rating:</label>
+            <form id="review-form" 
+                  class="review-form" 
+                  method="post" 
+                  action="{% url 'item detail' pk=object.pk slug=object.slug %}">
+                {% csrf_token %}
+            
+                <label for="id_rating">Rating:</label>
+            
+                <div class="star-rating" id="star-rating">
+                    {% for star in "12345" %}
+                        <span class="star" data-value="{{ star }}">&#9733;</span>
+                    {% endfor %}
+                </div>
+            
+                <textarea id="id_comment" name="comment" placeholder="Write your review here..." rows="4"></textarea>
+                <button type="submit" 
+                        id="submit-review-btn"
+                        data-item-id="{{ object.id }}" 
+                        data-item-slug="{{ object.slug }}" 
+                        data-csrf-token="{{ csrf_token }}">
+                    Submit Review
+                </button>
+            </form>
         
-            <div class="star-rating" id="star-rating">
-                {% for star in "12345" %}
-                    <span class="star" data-value="{{ star }}">&#9733;</span>
+            <div class="reviews-list" id="reviews-list">
+                <h4>All Reviews</h4>
+                {% for review in reviews %}
+                <div class="review-item">
+                    <div class="review-rating">Rating: {{ review.rating }}/5</div>
+                    <p class="review-comment">{{ review.comment }}</p>
+                    <p class="review-user">
+                        Posted by {{ review.user.libraryprofile.full_name }}
+                        on 
+                        {{ review.created_at|date:"Y-m-d H:i:s" }}
+                    </p>
+                </div>
                 {% endfor %}
             </div>
-        
-            <textarea id="id_comment" name="comment" placeholder="Write your review here..." rows="4"></textarea>
-            <button type="submit" 
-                    id="submit-review-btn"
-                    data-item-id="{{ object.id }}" 
-                    data-item-slug="{{ object.slug }}" 
-                    data-csrf-token="{{ csrf_token }}">
-                Submit Review
-            </button>
-        </form>
-    
-        <div class="reviews-list" id="reviews-list">
-            <h4>All Reviews</h4>
-            {% for review in reviews %}
-            <div class="review-item">
-                <div class="review-rating">Rating: {{ review.rating }}/5</div>
-                <p class="review-comment">{{ review.comment }}</p>
-                <p class="review-user">
-                    Posted by {{ review.user.libraryprofile.full_name }}
-                    on 
-                    {{ review.created_at|date:"Y-m-d H:i:s" }}
-                </p>
-            </div>
-            {% endfor %}
         </div>
-    </div>
+    {% else %}
+        <p>Please complete your profile to be able to review and comment!</p>
+    {% endif %}
     
 <div id="sample-modal" class="modal">
     <div class="modal-content">
