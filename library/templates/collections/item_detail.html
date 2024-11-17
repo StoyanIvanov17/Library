@@ -113,7 +113,10 @@
             </div>
         </div>
     {% else %}
-        <p>Please complete your profile to be able to review and comment!</p>
+        <p>
+            Please complete your profile to be able to review and comment!
+            <a href="{% url 'registration profile' %}" class="complete-profile-btn">Complete Profile</a>
+        </p>
     {% endif %}
     
 <div id="sample-modal" class="modal">
