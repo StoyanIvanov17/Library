@@ -37,7 +37,7 @@
 }
 
 .item-details-description br {
-    margin: 5px 0; /* Add some space between lines */
+    margin: 5px 0;
 }
 
 .admin-action-buttons,
@@ -92,30 +92,27 @@
     background-color: #006060;
 }
 
-/* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Modal Content */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    max-width: 600px; /* Limit the width */
+    width: 80%;
+    max-width: 600px;
     border-radius: 10px;
 }
 
-/* The Close Button */
 .close-btn {
     color: #aaa;
     float: right;
@@ -132,34 +129,34 @@
 
 .sample-text {
     padding: 15px;
-    background-color: #f0f0f0; /* Light background for better contrast */
-    border-radius: 5px; /* Rounded corners */
-    line-height: 1.6; /* Improve readability */
-    font-size: 1.1em; /* Slightly larger font size */
-    margin-top: 10px; /* Space above the sample text */
-    max-height: 400px; /* Set a maximum height */
-    overflow-y: auto; /* Add scroll if text exceeds max height */
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin-top: 10px;
+    max-height: 400px;
+    overflow-y: auto;
 }
 
 .modal-content h2 {
-    margin-bottom: 15px; /* Space below the title */
+    margin-bottom: 15px;
 }
 
 .save-profile-btn {
     align-items: center;
-    background-color: #28a3a3; /* Background color */
-    color: white; /* Text color */
-    border: none; /* Remove border */
-    padding: 10px 15px; /* Adjusted padding */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 1em; /* Adjust font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    max-width: 200px; /* Limit the button width */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    background-color: #28a3a3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    max-width: 200px;
+    transition: background-color 0.3s ease;
 }
 
 .save-profile-btn:hover {
-    background-color: #006060; /* Darker blue on hover */
+    background-color: #006060;
 }
 
 .delete-action-buttons {
@@ -169,7 +166,7 @@
 }
 
 .confirm-delete {
-    background-color: #f44336; /* Red background */
+    background-color: #f44336;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -178,7 +175,7 @@
 }
 
 .cancel-delete {
-    background-color: #aaa; /* Grey background */
+    background-color: #aaa;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -195,7 +192,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 15px;
-    gap: 20px; /* Adds consistent spacing between elements */
+    gap: 20px;
 }
 
 .pagination-controls button {
@@ -215,8 +212,8 @@
 .pagination-controls #current-page {
     font-size: 1.2em;
     text-align: center;
-    white-space: nowrap; /* Keeps the text on a single line */
-    line-height: 1; /* Ensures proper vertical alignment */
+    white-space: nowrap;
+    line-height: 1;
 }
 
 .review-section {
@@ -239,24 +236,24 @@
 
 .star {
     font-size: 24px;
-    color: #ccc; /* Default star color */
+    color: #ccc;
     cursor: pointer;
 }
 
 .star:hover,
 .star:hover ~ .star {
-    color: gold; /* Color when hovered */
+    color: gold;
 }
 
 .star.selected {
-    color: gold; /* Color for selected stars */
+    color: gold;
 }
 
 textarea {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    resize: none; /* Disable resizing */
+    resize: none;
 }
 
 #submit-review-btn {
@@ -269,7 +266,7 @@ textarea {
 }
 
 #submit-review-btn:hover {
-    background-color: #006060; /* Darker on hover */
+    background-color: #006060;
 }
 
 .reviews-list {
@@ -291,6 +288,7 @@ textarea {
 .review-comment {
     margin: 5px 0;
 }
+
 .search-library {
     display: flex;
     align-items: center;
@@ -335,6 +333,7 @@ textarea {
 .search-library button:active {
     background-color: transparent;
 }
+
 .complete-profile-btn {
     display: inline-block;
     margin-left: 10px;

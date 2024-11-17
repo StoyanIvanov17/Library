@@ -1,4 +1,3 @@
-/* General resets */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,7 +14,6 @@ body {
     overflow: hidden;
 }
 
-/* Loading screen container */
 .confirmation-loading-screen {
     position: relative;
     z-index: 1;
@@ -26,7 +24,6 @@ body {
     animation: confirmation-fadeIn 2s ease;
 }
 
-/* Envelope animation */
 .confirmation-envelope-animation {
     position: relative;
     display: inline-block;
@@ -56,7 +53,6 @@ body {
     animation: confirmation-flap 1s infinite ease;
 }
 
-/* Main text styles */
 h1 {
     font-size: 24px;
     margin: 15px 0;
@@ -67,7 +63,6 @@ p {
     margin-bottom: 20px;
 }
 
-/* Loading dots */
 .confirmation-loading-dots {
     font-size: 24px;
     font-weight: bold;
@@ -88,7 +83,6 @@ p {
     animation-delay: 0.4s;
 }
 
-/* Animations */
 @keyframes confirmation-bounce {
     0%, 100% {
         transform: translateY(0);
@@ -134,7 +128,6 @@ p {
     }
 }
 
-/* Background and floating bubbles */
 .confirmation-background {
     position: absolute;
     top: 0;
@@ -189,7 +182,6 @@ p {
     animation-delay: 1s;
 }
 
-/* Bubble rising animation */
 @keyframes confirmation-rise {
     0% {
         bottom: -100px;

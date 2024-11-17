@@ -7,7 +7,40 @@
     <list default="true" id="3487039d-45c7-437a-929a-29e1de615454" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/lb_accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/item_details.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/item_details.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/lb_collections/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_collections/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/lb_events/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_events/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/lb_home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/account-details.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/account-details.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/account-update.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/account-update.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/collection.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/confirmation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/event-detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/event-detail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/event-display.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/event-display.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/hero-image.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/hero-image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/item_create.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/item_details.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/login_register.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/account_details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/account_update.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/profile-registration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/signin_user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/signup_user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accounts/user_confirmation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/collections/item_create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/collections/item_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/collections/item_display.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/collections/item_update.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/events/event_create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/events/event_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/events/event_display.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/events/event_update.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/home_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/collections/views/tests_ItemCreateView.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/collections/views/tests_ItemCreateView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/collections/views/tests_ItemDetailView.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/collections/views/tests_ItemDetailView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/collections/views/tests_ItemListView.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/collections/views/tests_ItemListView.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +54,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="Python Script" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -99,7 +132,7 @@
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/freak/Library/library/staticfiles/images&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/freak/petstagram_demo/petstagram&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -515,7 +548,8 @@
       <workItem from="1731766410384" duration="2096000" />
       <workItem from="1731846111098" duration="647000" />
       <workItem from="1731847562172" duration="96000" />
-      <workItem from="1731849654969" duration="836000" />
+      <workItem from="1731849654969" duration="5780000" />
+      <workItem from="1731862787451" duration="4947000" />
     </task>
     <servers />
   </component>

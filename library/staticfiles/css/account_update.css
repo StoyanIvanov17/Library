@@ -1,5 +1,5 @@
-.item-create-page {
-    background: linear-gradient(135deg, rgba(255, 222, 185, 0.8), rgba(255, 148, 99, 0.8));
+.account-update-page {
+    background: linear-gradient(135deg, rgba(102, 158, 119, 0.9), rgba(115, 142, 168, 0.9));
     background-size: cover;
     font-family: 'Georgia', serif;
     color: #333;
@@ -9,9 +9,10 @@
     justify-content: center;
     align-items: center;
     background-position: center;
+    position: relative;
 }
 
-.item-create-page::before {
+.account-update-page::before {
     content: "";
     position: absolute;
     top: 0;
@@ -22,7 +23,7 @@
     z-index: -1;
 }
 
-.item-create-form-container {
+.account-update-form-container {
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -31,14 +32,14 @@
     gap: 20px;
     height: auto;
     position: relative;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.item-create-form-section,
-.item-create-image-section {
+.account-update-form-section,
+.account-update-image-section {
     flex: 0 0 45%;
     background-color: #fff;
     padding: 20px;
@@ -50,7 +51,7 @@
     height: auto;
 }
 
-.item-create-image-section {
+.account-update-image-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,7 +59,7 @@
     border-radius: 8px;
 }
 
-.item-create-book-image {
+.account-update-profile-image {
     width: 100%;
     height: auto;
     max-height: 100%;
@@ -66,24 +67,24 @@
     border-radius: 8px;
 }
 
-.item-create-form-title {
+.account-update-form-title {
     font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
 }
 
-.item-create-form-group {
+.account-update-form-group {
     margin-bottom: 15px;
 }
 
-.item-create-form-group label {
+.account-update-form-group label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-.item-create-form input,
-.item-create-form select {
+.account-update-form input,
+.account-update-form select {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
@@ -92,41 +93,41 @@
     transition: border-color 0.3s;
 }
 
-.item-create-form input:focus,
-.item-create-form select:focus {
-    border-color: #28a3a3;
+.account-update-form input:focus,
+.account-update-form select:focus {
+    border-color: #6a94b0;
     outline: none;
 }
 
-.item-create-submit-button {
+.account-update-submit-button {
     width: 100%;
     padding: 10px;
     font-size: 1.2rem;
     color: white;
-    background-color: #6c4f2b;
+    background-color: #5a8e6b;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.item-create-submit-button:hover {
-    background-color: #4f3621;
+.account-update-submit-button:hover {
+    background-color: #4a6c54;
 }
 
-.item-create-back-button {
+.account-update-back-button {
     width: 100%;
     padding: 10px;
     font-size: 1.2rem;
     color: white;
-    background-color: #9e7d47;
+    background-color: #8d9ca9;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
-.item-create-back-button:hover {
-    background-color: #7a5b3e;
+.account-update-back-button:hover {
+    background-color: #74828a;
 }

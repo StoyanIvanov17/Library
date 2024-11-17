@@ -17,7 +17,7 @@ UserModel = get_user_model()
 
 
 class SignInUserView(auth_views.LoginView):
-    template_name = 'accounts/signin_user.html'
+    template_name = 'accounts/account_signin_user.html'
     redirect_authenticated_user = True
 
     def get_success_url(self):
@@ -30,7 +30,7 @@ class SignInUserView(auth_views.LoginView):
 
 
 class SignUpUserView(views.CreateView):
-    template_name = 'accounts/signup_user.html'
+    template_name = 'accounts/account_signup_user.html'
     form_class = LibraryUserCreationForm
     success_url = reverse_lazy('home page')
 
@@ -59,7 +59,7 @@ class SignUpUserView(views.CreateView):
             fail_silently=False,
         )
 
-        return render(self.request, 'accounts/user_confirmation.html')
+        return render(self.request, 'accounts/account_user_confirmation.html')
 
     def get_success_url(self):
         return self.success_url
@@ -84,7 +84,7 @@ class VerifyEmailView(views.View):
 class LibraryProfileCreateView(auth_mixin.LoginRequiredMixin, views.UpdateView):
     model = LibraryProfile
     form_class = LibraryProfileForm
-    template_name = 'accounts/profile-registration.html'
+    template_name = 'accounts/account_profile_registration.html'
     success_url = reverse_lazy('account details')
 
     def get_success_url(self):

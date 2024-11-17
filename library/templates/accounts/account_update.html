@@ -1,26 +1,39 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
-<div class="item-create-form-container">
-    <div class="item-create-form-section">
-        <h2 class="item-create-form-title">Edit Profile</h2>
-        <form action="{% url 'account edit' pk=object.pk %}" 
-              method="post" 
-              enctype="multipart/form-data" 
-              class="item-create-form">
-            {% csrf_token %}
-            <div class="item-create-form-group">
-                {{ form }}
+{% block main_content %}
+    <body class="account-update-page">
+        <div class="account-update-form-container">
+            <div class="account-update-form-section">
+                <h2 class="account-update-form-title">Edit Profile</h2>
+                
+                <form action="{% url 'account edit' pk=object.pk %}" 
+                      method="post" 
+                      enctype="multipart/form-data" 
+                      class="account-update-form">
+                    
+                    {% csrf_token %}
+                    
+                    <div class="account-update-form-group">
+                        {{ form }}
+                    </div>
+                    
+                    <button type="submit" class="account-update-submit-button">Save Changes</button>
+                    <button type="button" onclick="history.back()" class="account-update-back-button">Cancel</button>
+                </form>
             </div>
-            <button type="submit" class="item-create-submit-button">Edit Profile</button>
-            <button type="button" onclick="history.back()" class="item-create-back-button">Go Back</button>
-        </form>
-    </div>
-    <div class="item-create-image-section">
-        {% if object.profile_picture %}
-            <img src="{{ object.profile_picture.url }}" 
-                 alt="{{ object.title }} image" 
-                 class="item-create-book-image">
-        {% endif %}
-    </div>
-</div>
+            
+            <div class="account-update-image-section">
+                {% if object.profile_picture %}
+                    <img src="{{ object.profile_picture.url }}" 
+                         alt="Profile Picture" 
+                         class="account-update-profile-image">
+                {% else %}
+                    <img src="{% static 'images/default-profile.jpg' %}" 
+                         alt="Default Profile" 
+                         class="account-update-profile-image">
+                {% endif %}
+            </div>
+        </div>
+    </body>
+{% endblock %}

@@ -1,4 +1,3 @@
-/* Overall container for the event details */
 .event-detail-container {
     display: flex;
     max-width: 1200px;
@@ -10,26 +9,23 @@
     align-items: flex-start;
     font-family: 'Arial', sans-serif;
     color: #333;
-    gap: 20px; /* Adds space between image and details */
+    gap: 20px;
 }
 
-/* Content area */
 .event-detail-content {
     flex: 2;
-    text-align: center; /* Center-align the content */
-    position: relative; /* Position relative for buttons placement */
+    text-align: center;
+    position: relative;
 }
 
-/* Title styling */
 .event-detail-title {
     font-size: 2.5rem;
     font-weight: bold;
     color: #212529;
-    margin: 20px 0 10px; /* Add margin for spacing */
-    text-align: center; /* Center the text horizontally */
+    margin: 20px 0 10px;
+    text-align: center;
 }
 
-/* Separator line */
 .event-detail-separator {
     border: 0;
     height: 1px;
@@ -37,7 +33,6 @@
     margin-bottom: 20px;
 }
 
-/* Event details (date, time, location, etc.) */
 .event-detail-info p {
     font-size: 1.2rem;
     margin-bottom: 10px;
@@ -47,23 +42,20 @@
     font-weight: bold;
 }
 
-/* Description styling */
 .event-detail-description {
     margin-top: 20px;
     line-height: 1.6;
     font-size: 1.1rem;
 }
 
-/* Buttons container */
 .event-detail-buttons {
-    position: absolute; /* Make buttons absolute for positioning */
-    top: 20px; /* Position buttons from the top */
-    left: 20px; /* Position buttons from the left */
+    position: absolute;
+    top: 20px;
+    left: 20px;
     display: flex;
-    gap: 10px; /* Space between buttons */
+    gap: 10px;
 }
 
-/* Button styles */
 .event-detail-btn {
     padding: 10px 25px;
     border-radius: 5px;
@@ -75,7 +67,6 @@
     transition: background-color 0.3s ease;
 }
 
-/* Edit button */
 .event-detail-edit-btn {
     background-color: #28a3a3;
     color: white;
@@ -85,7 +76,6 @@
     background-color: #006060;
 }
 
-/* Delete button */
 .event-detail-delete-btn {
     background-color: #dc3545;
     color: white;
@@ -95,7 +85,6 @@
     background-color: #c82333;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .event-detail-container {
         flex-direction: column;

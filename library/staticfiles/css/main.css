@@ -4,7 +4,7 @@ body {
 
 .main-content {
     padding: 20px;
-    margin-top: 40px; /* Adjust for spacing after the image */
+    margin-top: 40px;
 }
 
 button {
@@ -23,7 +23,6 @@ button:hover {
     background-color: #006060;
 }
 
-/* Featured Section */
 .home-page-featured-section {
     text-align: center;
     padding: 40px 20px;
@@ -88,7 +87,6 @@ button:hover {
     background-color: #006060;
 }
 
-/* Collection Highlights */
 .home-page-collection-highlights {
     text-align: center;
     padding: 40px 20px;
@@ -143,7 +141,6 @@ button:hover {
     background-color: #006060;
 }
 
-/* Testimonials Section */
 .home-page-testimonials {
     background-color: #006060;
     color: #fff;
