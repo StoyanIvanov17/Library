@@ -4,8 +4,6 @@ from django.utils.deconstruct import deconstructible
 
 @deconstructible
 class MaxFileSizeValidator(BaseValidator):
-    message = 'Ensure this file size is not greater than %(limit_value)s. Your file size is %(show_value)s.'
-    code = 'file_size_limit'
 
     def clean(self, file):
         return file.size

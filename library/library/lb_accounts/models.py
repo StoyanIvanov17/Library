@@ -104,7 +104,7 @@ class LibraryProfile(models.Model):
         upload_to='profile_photos/',
         null=True,
         blank=True,
-        validators=[MaxFileSizeValidator(10 * 1024 * 1024)],
+        validators=[MaxFileSizeValidator(limit_value=10 * 1024 * 1024)],
         verbose_name='Profile Picture'
     )
 

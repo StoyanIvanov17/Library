@@ -23,7 +23,8 @@
             <label for="profile_picture" class="custom-file-label">
                 <i class="fas fa-upload"></i> Upload Profile Picture
             </label>
-            <input type="file" id="profile_picture" name="profile_picture" class="form-control">
+            {{ form.profile_picture }}
+            {{ form.profile_picture.errors }}
             
             <button type="submit">Save Profile</button>
             <button type="button" onclick="window.location.href='{% url 'account details' pk=object.pk %}'" 

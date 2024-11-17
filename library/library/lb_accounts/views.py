@@ -3,7 +3,6 @@ from django.contrib.auth import mixins as auth_mixin
 
 
 from asgiref.sync import sync_to_async
-from django.contrib import messages
 from django.core.mail import send_mail
 from django.shortcuts import redirect, render
 from django.urls import reverse_lazy, reverse

@@ -65,6 +65,7 @@ class Item(models.Model):
     sample = models.TextField()
 
     slug = models.SlugField(
+        max_length=255,
         unique=True,
         blank=True
     )
@@ -83,7 +84,7 @@ class Item(models.Model):
 
         date_str = self.publication_date.strftime('%Y-%B-%d')
         slug_base = f"{self.item_type}-{date_str}-{self.author.name}-{self.title}-{self.genre}"
-        self.slug = slugify(slug_base)
+        self.slug = slugify(slug_base)[:255]
 
         super().save(*args, **kwargs)
 
