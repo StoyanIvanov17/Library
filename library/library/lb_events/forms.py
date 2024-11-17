@@ -11,7 +11,7 @@ class EventBaseForm(forms.ModelForm):
         widgets = {
             'name': forms.TextInput(attrs={'placeholder': 'Name'}),
             'date': forms.DateInput(attrs={'placeholder': 'Date', 'type': 'date'}),
-            'time': forms.TimeInput(attrs={'placeholder': 'Time', 'type': 'time', 'step': '900'}),
+            'time': forms.TimeInput(attrs={'placeholder': 'Time', 'type': 'time'}),
             'location': forms.TextInput(attrs={'placeholder': 'Location'}),
             'age_group': forms.TextInput(attrs={'placeholder': 'Age Group'}),
             'event_image': forms.FileInput(attrs={'placeholder': 'Event Image'}),

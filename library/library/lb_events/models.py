@@ -17,7 +17,7 @@ class Event(models.Model):
 
     date = models.DateField()
 
-    time = models.CharField(
+    time = models.TimeField(
         max_length=20,
     )
 
