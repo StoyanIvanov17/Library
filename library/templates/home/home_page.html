@@ -55,18 +55,15 @@
         </div>
     </section>
     
-    <section class="home-page-testimonials">
+    <section class="home-page-authors">
         <h2>Bestselling Authors of 2024</h2>
-        
-        <div class="home-page-testimonial">
-            <p>"The library's collection is amazing! I found books that I couldn't find anywhere else."</p>
-            <span>- Library Member</span>
-        </div>
-        
-        <div class="home-page-testimonial">
-            <p>"The events are fun and engaging! It's a great way to spend an afternoon."</p>
-            <span>- Library Member</span>
-        </div>
+
+        {% for author in bestselling_authors %}
+            <div class="home-page-author">
+                <img src="{{ author.author_image.url }}" alt="{{ author.name }}">
+                <h3>{{ author.name }}</h3>
+            </div>
+        {% endfor %}
     </section>
 </div>
 

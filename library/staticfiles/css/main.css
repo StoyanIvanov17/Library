@@ -143,33 +143,43 @@ button:hover {
     background-color: #006060;
 }
 
-.home-page-testimonials {
+.home-page-authors {
     background-color: #006060;
     color: #fff;
     text-align: center;
     padding: 40px 20px;
 }
 
-.home-page-testimonials h2 {
+.home-page-authors h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-.home-page-testimonial {
-    max-width: 600px;
+.home-page-author {
+    max-width: 200px;
     margin: 20px auto;
-    font-style: italic;
+    display: inline-block;
+    text-align: center;
 }
 
-.home-page-testimonial p {
-    font-size: 1.1em;
+.home-page-author img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
     margin-bottom: 10px;
 }
 
-.home-page-testimonial span {
-    display: block;
-    font-weight: bold;
-    color: #dfe6ef;
+.home-page-author h3 {
+    font-size: 1.3em;
+    color: #fff;
+}
+
+.home-page-author img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 .no-scroll {

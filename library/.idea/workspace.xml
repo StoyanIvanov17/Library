@@ -5,27 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3487039d-45c7-437a-929a-29e1de615454" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/library/lb_collections/migrations/0003_rename_author_bestauthors_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/lb_collections/migrations/0004_delete_bestauthors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/lb_home/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/lb_home/migrations/0002_rename_item_image_bestauthors_author_image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b87f4770-3097-46a2-a980-b629714cfde4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b87f4770-3097-46a2-a980-b629714cfde4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b87f4770-3097-46a2-a980-b629714cfde4/storage_v2/_src_/database/library_db.gs7L3Q/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b87f4770-3097-46a2-a980-b629714cfde4/storage_v2/_src_/database/library_db.gs7L3Q/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/lb_collections/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_collections/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/lb_collections/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_collections/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/lb_collections/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_collections/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/lb_collections/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_collections/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/lb_home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/lb_home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_home/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/lb_home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/staticfiles/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/collections/item_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/collections/item_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/collections/item_display.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/collections/item_collection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/home-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/home_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/collections/views/tests_ItemListView.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/collections/views/tests_ItemListView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/home_page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +100,7 @@
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/freak/petstagram_demo/petstagram&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/freak/Library/library/staticfiles/images&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -562,7 +545,8 @@
       <workItem from="1731970713310" duration="2688000" />
       <workItem from="1731980922281" duration="130000" />
       <workItem from="1732023297024" duration="4784000" />
-      <workItem from="1732029622636" duration="494000" />
+      <workItem from="1732029622636" duration="729000" />
+      <workItem from="1732035064716" duration="1403000" />
     </task>
     <servers />
   </component>
