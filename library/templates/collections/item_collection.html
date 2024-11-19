@@ -55,7 +55,7 @@
                     <div class="show-collection-overlay">
                         <div class="show-collection-text">
                             <h2 class="show-collection-title">{{ item.title }}</h2>
-                            <p class="show-collection-author">{{ item.author.name }}</p>
+                            <p class="show-collection-author">{{ item.author }}</p>
                             <a href="{% url 'item detail' pk=item.pk slug=item.slug %}" 
                                class="show-collection-details-button">Details</a>
                         </div>

@@ -53,14 +53,14 @@ class ItemListViewTests(TestCase):
         response = self.client.get(reverse('item display'))
 
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'collections/item_display.html')
+        self.assertTemplateUsed(response, 'collections/item_collection.html')
         self.assertEqual(len(response.context['items']), 3)
 
     def test_get_item_list_with_genre_filter(self):
         response = self.client.get(reverse('item display') + '?genre=Fiction')
 
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'collections/item_display.html')
+        self.assertTemplateUsed(response, 'collections/item_collection.html')
         self.assertEqual(len(response.context['items']), 2)
         for item in response.context['items']:
             self.assertEqual(item.genre, 'Fiction')

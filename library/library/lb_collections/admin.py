@@ -5,7 +5,7 @@ from library.lb_collections.models import Item, Review
 
 @admin.register(Item)
 class ItemAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'title', 'author__name', 'genre', 'item_type', 'publication_date', 'isbn')
+    list_display = ('pk', 'title', 'author', 'genre', 'item_type', 'publication_date', 'isbn')
     search_fields = ['title', 'author__name', 'genre', 'item_type']
     ordering = ['pk']
 

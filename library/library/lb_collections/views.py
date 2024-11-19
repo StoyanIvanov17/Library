@@ -34,7 +34,7 @@ class ItemCreateView(auth_mixin.LoginRequiredMixin, views.CreateView):
 
 
 class ItemListView(auth_mixin.LoginRequiredMixin, views.ListView):
-    template_name = 'collections/item_display.html'
+    template_name = 'collections/item_collection.html'
 
     def filter_by_genre(self, queryset):
         genre_query = self.request.GET.get('genre', '')

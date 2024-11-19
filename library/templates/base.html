@@ -17,6 +17,10 @@
                 <ul class="navbar-menu">
                     {% if user.is_superuser%}
                         <li class="navbar-item">
+                            <a href="{% url 'authors create' %}" class="navbar-link">Create Bestselling Author</a>
+                        </li>
+                        
+                        <li class="navbar-item">
                             <a href="{% url 'item create' %}" class="navbar-link">Create Item</a>
                         </li>
                         
