@@ -1,7 +1,10 @@
+from datetime import timedelta
+
 from django.contrib.auth import mixins as auth_mixin
 from django.db.models import Q
 from django.http import JsonResponse
 from django.urls import reverse_lazy, reverse
+from django.utils.timezone import now
 from django.views import generic as views
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
@@ -39,6 +42,7 @@ class ItemListView(auth_mixin.LoginRequiredMixin, views.ListView):
     def filter_by_genre(self, queryset):
         genre_query = self.request.GET.get('genre', '')
         item_type_query = self.request.GET.get('item_type', '')
+        recent_items_query = self.request.GET.get('recent', '')
 
         query = Q()
 
@@ -47,6 +51,10 @@ class ItemListView(auth_mixin.LoginRequiredMixin, views.ListView):
 
         if item_type_query and item_type_query != 'All':
             query &= Q(item_type=item_type_query)
+
+        if recent_items_query == 'true':
+            fourteen_days_ago = now() - timedelta(days=14)
+            query &= Q(created_at__gte=fourteen_days_ago)
 
         return queryset.filter(query)
 
@@ -58,6 +66,7 @@ class ItemListView(auth_mixin.LoginRequiredMixin, views.ListView):
         context = super().get_context_data(**kwargs)
         context['genre_query'] = self.request.GET.get('genre', '')
         context['item_type_query'] = self.request.GET.get('item_type', '')
+        context['recent_query'] = self.request.GET.get('recent', '')
         context['item_choices'] = Item.ItemTypeChoices.choices
         context['items'] = self.get_queryset()
 
