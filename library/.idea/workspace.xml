@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3487039d-45c7-437a-929a-29e1de615454" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/library/lb_events/migrations/0003_alter_event_slug.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/lb_home/migrations/0003_alter_bestauthors_author_image.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/lb_home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/home_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/lb_events/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/lb_events/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -546,7 +546,10 @@
       <workItem from="1731980922281" duration="130000" />
       <workItem from="1732023297024" duration="4784000" />
       <workItem from="1732029622636" duration="729000" />
-      <workItem from="1732035064716" duration="1403000" />
+      <workItem from="1732035064716" duration="1603000" />
+      <workItem from="1732036984533" duration="3000" />
+      <workItem from="1732047253905" duration="53000" />
+      <workItem from="1732107501265" duration="1233000" />
     </task>
     <servers />
   </component>

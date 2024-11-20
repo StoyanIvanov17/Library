@@ -38,12 +38,16 @@ class Event(models.Model):
         verbose_name='Event Image',
     )
 
-    slug = models.SlugField(unique=True, blank=True)
+    slug = models.SlugField(
+        max_length=255,
+        unique=True,
+        blank=True
+    )
 
     def save(self, *args, **kwargs):
         date_str = self.date.strftime('%Y-%B-%d')
         slug_base = f"{self.name}-{date_str}-{self.location}-{self.age_group}"
-        self.slug = slugify(slug_base)
+        self.slug = slugify(slug_base)[:255]
         super().save(*args, **kwargs)
 
     def __str__(self):
