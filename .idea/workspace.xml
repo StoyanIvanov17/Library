@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3487039d-45c7-437a-929a-29e1de615454" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;StoyanIvanov17&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/StoyanIvanov17/Library.git&quot;,
+    &quot;accountId&quot;: &quot;4111d4dd-0766-4e05-a389-951969bd1a92&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2mGDy15vp04ubQA1HijjZ4sXL2m" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.library.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_BookCreateView.BookCreateViewTests.test_get_create__when_authorized_user__expect_200.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_authorized_user__expect_200.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_authorized_user__expect_200_and_correct_template.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_unauthorized_user__expect_302_redirect_to_login.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_unauthorized_user__expect_raise_403.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_success_url__when_valid_item__expect_correct_url.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_authorized_user__expect_302_and_redirect_to_item_collections.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_authorized_user__expect_302_and_redirect_to_item_details.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_invalid_data__expect_form_errors.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_item_created_for_logged_in_user.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_unauthorized_user__expect_redirect_to_login.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_valid_data__expect_item_created.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_valid_login_data__expect_item_created.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.ItemCreateViewTests.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.ItemCreateViewTests.test_post_create__when_invalid_data__expect_form_errors.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.ItemCreateViewTests.test_post_create__when_valid_data__expect_item_created.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_get_create__when_authorized_user__expect_200.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_get_item_detail__when_authorized_user__expect_200.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_get_item_detail__when_unauthorized_user__expect_raise_403.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_post_review__when_valid_data__expect_review_created.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_post_review__when_valid_data__expect_success_response.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_post_valid_review.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.test_get_item_detail__when_authorized_user__expect_200.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.test_get_item_detail__when_unauthorized_user__expect_raise_403.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.test_post_create_review__when_invalid_data__expect_form_errors.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.test_post_create_review__when_valid_comment_and_rating__expect_success.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_context_data_in_item_list_view.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_both_filters.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_item_type_filter.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_with_genre_filter.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_without_filters.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: tests.events.views.tests_EventListView.EventListedViewTest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.views.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/freak/Library/library/staticfiles/images&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\freak\Library\library\staticfiles\images" />
+      <recent name="C:\Users\freak\MyLibraryWebApp\library\staticfiles\images" />
+      <recent name="C:\Users\freak\MyLibraryWebApp\library\staticfiles\css" />
+      <recent name="C:\Users\freak\MyLibraryWebApp\library\library\lb_home" />
+      <recent name="C:\Users\freak\MyLibraryWebApp\library\library\lb_events" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\freak\Library\library\staticfiles\images" />
+      <recent name="C:\Users\freak\Library\library\staticfiles\js\accounts_js" />
+      <recent name="C:\Users\freak\MyLibraryWebApp\library\staticfiles\images" />
+      <recent name="C:\Users\freak\MyLibraryWebApp\library\library" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django Server.Library">
+    <configuration name="Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_context_data_in_item_list_view" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="library" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.collections.views.tests_ItemListView.ItemListViewTests.test_context_data_in_item_list_view" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_both_filters" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="library" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_both_filters" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_item_type_filter" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="library" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_item_type_filter" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_with_genre_filter" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="library" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_with_genre_filter" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_without_filters" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="library" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_without_filters" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Library" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Library" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="library" type="Python.DjangoServer" factoryName="Django server">
+      <module name="library" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="library.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (library)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="true" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+          <ENTRY IS_ENABLED="true" PARSER="env" IS_EXECUTABLE="false" PATH=".env" />
+        </ENTRIES>
+      </EXTENSION>
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="library" type="Python.DjangoServer" factoryName="Django server">
+      <module name="library" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="library.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="library" type="Python.DjangoServer" factoryName="Django server">
+      <module name="library" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="library.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_context_data_in_item_list_view" />
+      <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_both_filters" />
+      <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_item_type_filter" />
+      <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_with_genre_filter" />
+      <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_without_filters" />
+      <item itemvalue="Django Server.library" />
+      <item itemvalue="Django Server.Library" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_context_data_in_item_list_view" />
+        <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_both_filters" />
+        <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_item_type_filter" />
+        <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_with_genre_filter" />
+        <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_without_filters" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17890.14" />
+        <option value="bundled-python-sdk-5b207ade9991-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17890.14" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3487039d-45c7-437a-929a-29e1de615454" name="Changes" comment="" />
+      <created>1726694269738</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726694269738</updated>
+      <workItem from="1726694272888" duration="1814000" />
+      <workItem from="1726696095083" duration="270000" />
+      <workItem from="1726708016224" duration="3660000" />
+      <workItem from="1726750549782" duration="4146000" />
+      <workItem from="1726760426667" duration="382000" />
+      <workItem from="1726761585407" duration="2563000" />
+      <workItem from="1726767349278" duration="692000" />
+      <workItem from="1726776220548" duration="1691000" />
+      <workItem from="1726779997297" duration="57000" />
+      <workItem from="1726780361843" duration="13928000" />
+      <workItem from="1726796218003" duration="1184000" />
+      <workItem from="1726838878256" duration="3358000" />
+      <workItem from="1726842432243" duration="21000" />
+      <workItem from="1726845507183" duration="165000" />
+      <workItem from="1726855195467" duration="622000" />
+      <workItem from="1726856057458" duration="5899000" />
+      <workItem from="1726866186092" duration="572000" />
+      <workItem from="1726867697781" duration="309000" />
+      <workItem from="1726869379925" duration="2116000" />
+      <workItem from="1726944245027" duration="617000" />
+      <workItem from="1726965938880" duration="602000" />
+      <workItem from="1727015258445" duration="146000" />
+      <workItem from="1727027272318" duration="1736000" />
+      <workItem from="1727029318524" duration="2608000" />
+      <workItem from="1727086771276" duration="27000" />
+      <workItem from="1727087731164" duration="3340000" />
+      <workItem from="1727093082532" duration="1522000" />
+      <workItem from="1727101795921" duration="2392000" />
+      <workItem from="1727104284022" duration="777000" />
+      <workItem from="1727105456337" duration="418000" />
+      <workItem from="1727105880073" duration="328000" />
+      <workItem from="1727180575398" duration="274000" />
+      <workItem from="1727180995171" duration="9486000" />
+      <workItem from="1727190849445" duration="27000" />
+      <workItem from="1727205813394" duration="3219000" />
+      <workItem from="1727218732983" duration="3089000" />
+      <workItem from="1727221940393" duration="5000" />
+      <workItem from="1727295512549" duration="4861000" />
+      <workItem from="1727300418757" duration="84000" />
+      <workItem from="1727302543492" duration="32000" />
+      <workItem from="1727306692271" duration="2006000" />
+      <workItem from="1727308903758" duration="863000" />
+      <workItem from="1727311382246" duration="1363000" />
+      <workItem from="1727372406823" duration="78000" />
+      <workItem from="1727374957405" duration="2735000" />
+      <workItem from="1727377903190" duration="3605000" />
+      <workItem from="1727381530922" duration="566000" />
+      <workItem from="1727382121291" duration="23000" />
+      <workItem from="1727398293637" duration="49000" />
+      <workItem from="1727469765899" duration="3863000" />
+      <workItem from="1727476429327" duration="185000" />
+      <workItem from="1727483992815" duration="818000" />
+      <workItem from="1727485718771" duration="952000" />
+      <workItem from="1727562531723" duration="193000" />
+      <workItem from="1727563024876" duration="3043000" />
+      <workItem from="1727647278058" duration="642000" />
+      <workItem from="1727692729195" duration="1574000" />
+      <workItem from="1727729695112" duration="3762000" />
+      <workItem from="1727745067146" duration="1391000" />
+      <workItem from="1727782339016" duration="33000" />
+      <workItem from="1727784703293" duration="4790000" />
+      <workItem from="1727907394443" duration="3124000" />
+      <workItem from="1727959476625" duration="1549000" />
+      <workItem from="1727974537957" duration="2115000" />
+      <workItem from="1727994970102" duration="427000" />
+      <workItem from="1727999480304" duration="3589000" />
+      <workItem from="1728039817212" duration="4137000" />
+      <workItem from="1728043967474" duration="3711000" />
+      <workItem from="1728050694452" duration="322000" />
+      <workItem from="1728074908524" duration="218000" />
+      <workItem from="1728151624253" duration="260000" />
+      <workItem from="1728240234489" duration="1255000" />
+      <workItem from="1728326771159" duration="42000" />
+      <workItem from="1728347587622" duration="35000" />
+      <workItem from="1728388680469" duration="14000" />
+      <workItem from="1728397428481" duration="6159000" />
+      <workItem from="1728403755606" duration="3437000" />
+      <workItem from="1728407336647" duration="4896000" />
+      <workItem from="1728413604289" duration="1132000" />
+      <workItem from="1728415160539" duration="33000" />
+      <workItem from="1728415199907" duration="618000" />
+      <workItem from="1728416070282" duration="1779000" />
+      <workItem from="1728417859518" duration="1501000" />
+      <workItem from="1728434259339" duration="32000" />
+      <workItem from="1728479009204" duration="48000" />
+      <workItem from="1728495508376" duration="7000" />
+      <workItem from="1728591876980" duration="327000" />
+      <workItem from="1728667995959" duration="1722000" />
+      <workItem from="1728673087850" duration="104000" />
+      <workItem from="1728681090363" duration="2568000" />
+      <workItem from="1728685047498" duration="1213000" />
+      <workItem from="1728686310699" duration="40000" />
+      <workItem from="1728777610159" duration="1702000" />
+      <workItem from="1728815355472" duration="542000" />
+      <workItem from="1728819012147" duration="477000" />
+      <workItem from="1728819575856" duration="209000" />
+      <workItem from="1728824358452" duration="359000" />
+      <workItem from="1728854972269" duration="31000" />
+      <workItem from="1728856897931" duration="597000" />
+      <workItem from="1728857556206" duration="138000" />
+      <workItem from="1728864012646" duration="2197000" />
+      <workItem from="1728899783980" duration="28000" />
+      <workItem from="1728902536258" duration="117000" />
+      <workItem from="1728910718493" duration="3365000" />
+      <workItem from="1728933872655" duration="248000" />
+      <workItem from="1729013483658" duration="1000" />
+      <workItem from="1729102773581" duration="5000" />
+      <workItem from="1729270460713" duration="535000" />
+      <workItem from="1729280949094" duration="2433000" />
+      <workItem from="1729283710804" duration="116000" />
+      <workItem from="1729370883410" duration="429000" />
+      <workItem from="1729418581811" duration="3432000" />
+      <workItem from="1729422035088" duration="7000" />
+      <workItem from="1729440439868" duration="1735000" />
+      <workItem from="1729462848897" duration="890000" />
+      <workItem from="1729463746044" duration="311000" />
+      <workItem from="1729504307874" duration="161000" />
+      <workItem from="1729507662998" duration="1435000" />
+      <workItem from="1729509934627" duration="853000" />
+      <workItem from="1729511741952" duration="1028000" />
+      <workItem from="1729533362622" duration="8158000" />
+      <workItem from="1729541668531" duration="19000" />
+      <workItem from="1729547891714" duration="769000" />
+      <workItem from="1729549626286" duration="5000" />
+      <workItem from="1729549787972" duration="237000" />
+      <workItem from="1729550038790" duration="146000" />
+      <workItem from="1729550282760" duration="146000" />
+      <workItem from="1729586598492" duration="542000" />
+      <workItem from="1729587149211" duration="3025000" />
+      <workItem from="1729603880087" duration="2395000" />
+      <workItem from="1729606680785" duration="1634000" />
+      <workItem from="1729608332825" duration="816000" />
+      <workItem from="1729609728500" duration="441000" />
+      <workItem from="1729612570970" duration="1537000" />
+      <workItem from="1729617424307" duration="957000" />
+      <workItem from="1729618585535" duration="1222000" />
+      <workItem from="1729621136389" duration="1136000" />
+      <workItem from="1729624147081" duration="377000" />
+      <workItem from="1729624530706" duration="159000" />
+      <workItem from="1729624769560" duration="4436000" />
+      <workItem from="1729636283901" duration="21000" />
+      <workItem from="1729641481458" duration="1721000" />
+      <workItem from="1729643814646" duration="200000" />
+      <workItem from="1729668634351" duration="18000" />
+      <workItem from="1729680880620" duration="403000" />
+      <workItem from="1729713855196" duration="121000" />
+      <workItem from="1729982493681" duration="39000" />
+      <workItem from="1730207494801" duration="48000" />
+      <workItem from="1730221918598" duration="329000" />
+      <workItem from="1730404354649" duration="15000" />
+      <workItem from="1730719934247" duration="1955000" />
+      <workItem from="1730808773844" duration="2695000" />
+      <workItem from="1730811619329" duration="761000" />
+      <workItem from="1730822673591" duration="8940000" />
+      <workItem from="1730836394462" duration="41000" />
+      <workItem from="1730841408753" duration="173000" />
+      <workItem from="1730901956048" duration="36000" />
+      <workItem from="1730923712470" duration="3328000" />
+      <workItem from="1730982617013" duration="206000" />
+      <workItem from="1730982868517" duration="57000" />
+      <workItem from="1731068590924" duration="1681000" />
+      <workItem from="1731074340466" duration="3235000" />
+      <workItem from="1731079402807" duration="4449000" />
+      <workItem from="1731083882028" duration="9000" />
+      <workItem from="1731084052922" duration="117000" />
+      <workItem from="1731268895027" duration="133000" />
+      <workItem from="1731327218210" duration="3631000" />
+      <workItem from="1731412800041" duration="705000" />
+      <workItem from="1731441478506" duration="1882000" />
+      <workItem from="1731499752484" duration="8053000" />
+      <workItem from="1731509984561" duration="4571000" />
+      <workItem from="1731514581167" duration="4710000" />
+      <workItem from="1731523166802" duration="1014000" />
+      <workItem from="1731602088093" duration="2509000" />
+      <workItem from="1731766316057" duration="87000" />
+      <workItem from="1731766410384" duration="2096000" />
+      <workItem from="1731846111098" duration="647000" />
+      <workItem from="1731847562172" duration="96000" />
+      <workItem from="1731849654969" duration="5780000" />
+      <workItem from="1731862787451" duration="4947000" />
+      <workItem from="1731867755233" duration="278000" />
+      <workItem from="1731880259189" duration="1088000" />
+      <workItem from="1731884481122" duration="1403000" />
+      <workItem from="1731934502986" duration="32000" />
+      <workItem from="1731970713310" duration="2688000" />
+      <workItem from="1731980922281" duration="130000" />
+      <workItem from="1732023297024" duration="4784000" />
+      <workItem from="1732029622636" duration="729000" />
+      <workItem from="1732035064716" duration="1603000" />
+      <workItem from="1732036984533" duration="3000" />
+      <workItem from="1732047253905" duration="53000" />
+      <workItem from="1732107501265" duration="1723000" />
+      <workItem from="1732110930560" duration="1128000" />
+      <workItem from="1732123414880" duration="414000" />
+      <workItem from="1732154475215" duration="555000" />
+      <workItem from="1732206120473" duration="582000" />
+      <workItem from="1732214702340" duration="61000" />
+      <workItem from="1732375812605" duration="26000" />
+      <workItem from="1732535259038" duration="42000" />
+      <workItem from="1732620864369" duration="45000" />
+      <workItem from="1732621138459" duration="29000" />
+      <workItem from="1732621256459" duration="340000" />
+      <workItem from="1732625730163" duration="533000" />
+      <workItem from="1732742362051" duration="102000" />
+      <workItem from="1732887356112" duration="206000" />
+      <workItem from="1732887601885" duration="359000" />
+      <workItem from="1732888317092" duration="52000" />
+      <workItem from="1732893691386" duration="38000" />
+      <workItem from="1732894097927" duration="12000" />
+      <workItem from="1732894422317" duration="16000" />
+      <workItem from="1732895215075" duration="42000" />
+      <workItem from="1732896067599" duration="242000" />
+      <workItem from="1733013853056" duration="640000" />
+      <workItem from="1733166565691" duration="40000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemDetailView_BookDetailViewTests_test_post_review__when_valid_data__expect_review_created.coverage" NAME="Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_post_review__when_valid_data__expect_review_created Coverage Results" MODIFIED="1730808960142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests_test_get_create__when_unauthorized_user__expect_302_redirect_to_login.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_unauthorized_user__expect_302_redirect_to_login Coverage Results" MODIFIED="1730825038306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemDetailView_ItemDetailViewTests_test_get_item_detail__when_unauthorized_user__expect_raise_403.coverage" NAME="Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.test_get_item_detail__when_unauthorized_user__expect_raise_403 Coverage Results" MODIFIED="1730826881668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemDetailView_BookDetailViewTests_test_get_create__when_authorized_user__expect_200.coverage" NAME="Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_get_create__when_authorized_user__expect_200 Coverage Results" MODIFIED="1730720468754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemDetailView_BookDetailViewTests_test_post_valid_review.coverage" NAME="Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_post_valid_review Coverage Results" MODIFIED="1730811831669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests_test_post_create__when_valid_data__expect_item_created.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_valid_data__expect_item_created Coverage Results" MODIFIED="1730825245505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests_test_post_create__when_authorized_user__expect_302_and_redirect_to_item_details.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_authorized_user__expect_302_and_redirect_to_item_details Coverage Results" MODIFIED="1729619368868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_events_views_tests_EventListView_EventListedViewTest.coverage" NAME="Test: tests.events.views.tests_EventListView.EventListedViewTest Coverage Results" MODIFIED="1730207506050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemListView_ItemListViewTests_test_context_data_in_item_list_view.coverage" NAME="Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_context_data_in_item_list_view Coverage Results" MODIFIED="1730926971613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_ItemCreateViewTests_test_post_create__when_valid_data__expect_item_created.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.ItemCreateViewTests.test_post_create__when_valid_data__expect_item_created Coverage Results" MODIFIED="1730826435901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemDetailView_BookDetailViewTests_test_post_review__when_valid_data__expect_success_response.coverage" NAME="Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_post_review__when_valid_data__expect_success_response Coverage Results" MODIFIED="1730809362248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemDetailView_BookDetailViewTests_test_get_item_detail__when_unauthorized_user__expect_raise_403.coverage" NAME="Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_get_item_detail__when_unauthorized_user__expect_raise_403 Coverage Results" MODIFIED="1730811428398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemListView_ItemListViewTests_test_get_item_list_with_genre_filter.coverage" NAME="Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_with_genre_filter Coverage Results" MODIFIED="1730926861417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_ItemCreateViewTests_test_post_create__when_invalid_data__expect_form_errors.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.ItemCreateViewTests.test_post_create__when_invalid_data__expect_form_errors Coverage Results" MODIFIED="1730826450010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemDetailView_BookDetailViewTests.coverage" NAME="Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests Coverage Results" MODIFIED="1730811855007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_ItemCreateViewTests.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.ItemCreateViewTests Coverage Results" MODIFIED="1730826495535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemDetailView_ItemDetailViewTests_test_post_create_review__when_valid_comment_and_rating__expect_success.coverage" NAME="Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.test_post_create_review__when_valid_comment_and_rating__expect_success Coverage Results" MODIFIED="1730834448486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests_test_post_create__when_unauthorized_user__expect_redirect_to_login.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_unauthorized_user__expect_redirect_to_login Coverage Results" MODIFIED="1729624848128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemListView_ItemListViewTests_test_get_item_list_item_type_filter.coverage" NAME="Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_item_type_filter Coverage Results" MODIFIED="1730926915655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_BookCreateView_BookCreateViewTests_test_get_create__when_authorized_user__expect_200.coverage" NAME="Test: tests.collections.views.tests_BookCreateView.BookCreateViewTests.test_get_create__when_authorized_user__expect_200 Coverage Results" MODIFIED="1729618171497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$views.coverage" NAME="views Coverage Results" MODIFIED="1727381601546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/library/lb_collections" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemListView_ItemListViewTests_test_get_item_list_without_filters.coverage" NAME="Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_without_filters Coverage Results" MODIFIED="1730925827198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests_test_post_create__when_valid_login_data__expect_item_created.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_valid_login_data__expect_item_created Coverage Results" MODIFIED="1730823971686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests_test_get_create__when_authorized_user__expect_200_and_correct_template.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_authorized_user__expect_200_and_correct_template Coverage Results" MODIFIED="1730825034675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemDetailView_BookDetailViewTests_test_get_item_detail__when_authorized_user__expect_200.coverage" NAME="Test: tests.collections.views.tests_ItemDetailView.BookDetailViewTests.test_get_item_detail__when_authorized_user__expect_200 Coverage Results" MODIFIED="1730720750282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests_test_get_create__when_unauthorized_user__expect_raise_403.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_unauthorized_user__expect_raise_403 Coverage Results" MODIFIED="1730720941546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests Coverage Results" MODIFIED="1730811863203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemDetailView_ItemDetailViewTests_test_post_create_review__when_invalid_data__expect_form_errors.coverage" NAME="Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.test_post_create_review__when_invalid_data__expect_form_errors Coverage Results" MODIFIED="1730827041600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemDetailView_ItemDetailViewTests_test_get_item_detail__when_authorized_user__expect_200.coverage" NAME="Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests.test_get_item_detail__when_authorized_user__expect_200 Coverage Results" MODIFIED="1730828293564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests_test_get_success_url__when_valid_item__expect_correct_url.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_success_url__when_valid_item__expect_correct_url Coverage Results" MODIFIED="1729642800313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemDetailView_ItemDetailViewTests.coverage" NAME="Test: tests.collections.views.tests_ItemDetailView.ItemDetailViewTests Coverage Results" MODIFIED="1730834451494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests_test_get_create__when_authorized_user__expect_200.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_get_create__when_authorized_user__expect_200 Coverage Results" MODIFIED="1729628898364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests_test_post_create__when_item_created_for_logged_in_user.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_item_created_for_logged_in_user Coverage Results" MODIFIED="1729624928090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemListView_ItemListViewTests_test_get_item_list_both_filters.coverage" NAME="Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_both_filters Coverage Results" MODIFIED="1730926936536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests_test_post_create__when_invalid_data__expect_form_errors.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_invalid_data__expect_form_errors Coverage Results" MODIFIED="1729628425939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/library$Test__tests_collections_views_tests_ItemCreateView_BookCreateViewTests_test_post_create__when_authorized_user__expect_302_and_redirect_to_item_collections.coverage" NAME="Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.test_post_create__when_authorized_user__expect_302_and_redirect_to_item_collections Coverage Results" MODIFIED="1729619504009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>
