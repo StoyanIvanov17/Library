@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3487039d-45c7-437a-929a-29e1de615454" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +28,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -55,6 +57,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.Library.executor&quot;: &quot;Run&quot;,
     &quot;Django Server.library.executor&quot;: &quot;Run&quot;,
     &quot;Django tests.Test: tests.collections.views.tests_BookCreateView.BookCreateViewTests.test_get_create__when_authorized_user__expect_200.executor&quot;: &quot;Run&quot;,
     &quot;Django tests.Test: tests.collections.views.tests_ItemCreateView.BookCreateViewTests.executor&quot;: &quot;Run&quot;,
@@ -97,7 +100,7 @@
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/freak/Library/library/staticfiles/images&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/freak/Library&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -241,6 +244,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="library.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -346,13 +350,13 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Django Server.Library" />
+      <item itemvalue="Django Server.library" />
       <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_context_data_in_item_list_view" />
       <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_both_filters" />
       <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_item_type_filter" />
       <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_with_genre_filter" />
       <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_without_filters" />
-      <item itemvalue="Django Server.library" />
-      <item itemvalue="Django Server.Library" />
     </list>
     <recent_temporary>
       <list>
@@ -594,6 +598,10 @@
       <workItem from="1732896067599" duration="242000" />
       <workItem from="1733013853056" duration="640000" />
       <workItem from="1733166565691" duration="40000" />
+      <workItem from="1733431542221" duration="536000" />
+      <workItem from="1733432087155" duration="35000" />
+      <workItem from="1733439696111" duration="402000" />
+      <workItem from="1733440104901" duration="2314000" />
     </task>
     <servers />
   </component>
