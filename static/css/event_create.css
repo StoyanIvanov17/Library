@@ -1,0 +1,138 @@
+.event-create-page {
+    background: linear-gradient(135deg, rgba(185, 165, 255, 0.8), rgba(255, 199, 140, 0.8));
+    background-size: cover;
+    font-family: 'Georgia', serif;
+    color: #333;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    position: relative;
+}
+
+.event-create-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://www.transparenttextures.com/patterns/old-map.png');
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.event-create-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: 20px auto;
+    width: 1000px;
+    gap: 20px;
+    height: auto;
+    position: relative;
+    background: rgba(255, 245, 230, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.event-create-form-section,
+.event-create-image-section {
+    flex: 0 0 45%;
+    background-color: #fff5e1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ffe1b8;
+}
+
+.event-create-image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.event-create-event-image {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ffc3a0;
+}
+
+.event-create-form-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #774f38;
+}
+
+.event-create-form-group {
+    margin-bottom: 15px;
+}
+
+.event-create-form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #774f38;
+}
+
+.event-create-form input,
+.event-create-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #d1a571;
+    border-radius: 5px;
+    background-color: #fffdf5;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.event-create-form input:focus,
+.event-create-form select:focus {
+    border-color: #e67e22;
+    background-color: #fff9e8;
+    outline: none;
+}
+
+.event-create-submit-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #cf7c43;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.event-create-submit-button:hover {
+    background-color: #8e634b;
+}
+
+.event-create-back-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #8d81ed;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.event-create-back-button:hover {
+    background-color: #666097;
+}

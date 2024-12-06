@@ -1,0 +1,133 @@
+.account-update-page {
+    background: linear-gradient(135deg, rgba(102, 158, 119, 0.9), rgba(115, 142, 168, 0.9));
+    background-size: cover;
+    font-family: 'Georgia', serif;
+    color: #333;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    position: relative;
+}
+
+.account-update-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://www.transparenttextures.com/patterns/old-map.png');
+    z-index: -1;
+}
+
+.account-update-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: 20px auto;
+    width: 1000px;
+    gap: 20px;
+    height: auto;
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.account-update-form-section,
+.account-update-image-section {
+    flex: 0 0 45%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    height: auto;
+}
+
+.account-update-image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.account-update-profile-image {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.account-update-form-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.account-update-form-group {
+    margin-bottom: 15px;
+}
+
+.account-update-form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.account-update-form input,
+.account-update-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.account-update-form input:focus,
+.account-update-form select:focus {
+    border-color: #6a94b0;
+    outline: none;
+}
+
+.account-update-submit-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #5a8e6b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.account-update-submit-button:hover {
+    background-color: #4a6c54;
+}
+
+.account-update-back-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #8d9ca9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.account-update-back-button:hover {
+    background-color: #74828a;
+}

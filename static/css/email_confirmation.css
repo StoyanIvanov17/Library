@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #a6c0fe, #f68084);
+    overflow: hidden;
+}
+
+.confirmation-loading-screen {
+    position: relative;
+    z-index: 1;
+}
+
+.confirmation-loading-content {
+    display: inline-block;
+    animation: confirmation-fadeIn 2s ease;
+}
+
+.confirmation-envelope-animation {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.confirmation-envelope {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    background-color: #333;
+    border-radius: 4px;
+    overflow: hidden;
+    transform-origin: bottom center;
+    animation: confirmation-bounce 2s infinite ease;
+}
+
+.confirmation-envelope-flap {
+    position: absolute;
+    top: -14px;
+    left: 0;
+    width: 50px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 4px;
+    transform-origin: bottom center;
+    animation: confirmation-flap 1s infinite ease;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.confirmation-loading-dots {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    animation: confirmation-blink 1.5s infinite steps(1, end);
+}
+
+.confirmation-loading-dots span {
+    display: inline-block;
+    animation: confirmation-loadingBounce 1.5s infinite alternate;
+}
+
+.confirmation-loading-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.confirmation-loading-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes confirmation-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes confirmation-flap {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes confirmation-loadingBounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes confirmation-blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes confirmation-fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.confirmation-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #a6c0fe, #f68084);
+    overflow: hidden;
+    z-index: 0;
+}
+
+.confirmation-bubble {
+    position: absolute;
+    bottom: -100px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: confirmation-rise 8s infinite ease-in;
+    opacity: 0.6;
+}
+
+.confirmation-bubble:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    left: 20%;
+    animation-duration: 10s;
+    animation-delay: 2s;
+}
+
+.confirmation-bubble:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    left: 40%;
+    animation-duration: 12s;
+    animation-delay: 4s;
+}
+
+.confirmation-bubble:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    left: 60%;
+    animation-duration: 9s;
+    animation-delay: 6s;
+}
+
+.confirmation-bubble:nth-child(5) {
+    width: 70px;
+    height: 70px;
+    left: 80%;
+    animation-duration: 11s;
+    animation-delay: 1s;
+}
+
+@keyframes confirmation-rise {
+    0% {
+        bottom: -100px;
+        opacity: 0.5;
+        transform: translateX(0);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 100vh;
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+}

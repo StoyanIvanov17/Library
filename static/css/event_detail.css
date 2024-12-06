@@ -1,0 +1,106 @@
+.event-detail-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    align-items: flex-start;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    gap: 20px;
+}
+
+.event-detail-content {
+    flex: 2;
+    text-align: center;
+    position: relative;
+}
+
+.event-detail-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #212529;
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+.event-detail-separator {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.event-detail-info p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.event-detail-info strong {
+    font-weight: bold;
+}
+
+.event-detail-description {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.event-detail-buttons {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.event-detail-btn {
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.event-detail-edit-btn {
+    background-color: #28a3a3;
+    color: white;
+}
+
+.event-detail-edit-btn:hover {
+    background-color: #006060;
+}
+
+.event-detail-delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.event-detail-delete-btn:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+    .event-detail-container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .event-detail-title {
+        font-size: 2rem;
+    }
+
+    .event-detail-info p {
+        font-size: 1rem;
+    }
+
+    .event-detail-edit-btn, .event-detail-delete-btn {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+}

@@ -5,7 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3487039d-45c7-437a-929a-29e1de615454" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/library/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/account_details.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/account_details.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/account_login_register.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/account_login_register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/account_update.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/account_update.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/email_confirmation.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/email_confirmation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/event_create.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/event_create.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/event_detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/event_detail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/event_display.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/event_display.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/hero_image.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/hero_image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/item_collection.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/item_collection.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/item_create.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/item_create.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/item_details.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/item_details.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/js/event-delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/event-delete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/js/event-save.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/event-save.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/js/item-delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/item-delete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/js/item-review-stars.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/item-review-stars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/js/item-review.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/item-review.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/js/item-sample.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/item-sample.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/js/item-save.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/item-save.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/js/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/js/profile-delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/profile-delete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/js/scroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/scroll.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +124,7 @@
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/freak/Library&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/freak/Library/static&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -116,11 +142,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\freak\Library\static" />
       <recent name="C:\Users\freak\Library\library\staticfiles\images" />
       <recent name="C:\Users\freak\MyLibraryWebApp\library\staticfiles\images" />
       <recent name="C:\Users\freak\MyLibraryWebApp\library\staticfiles\css" />
       <recent name="C:\Users\freak\MyLibraryWebApp\library\library\lb_home" />
-      <recent name="C:\Users\freak\MyLibraryWebApp\library\library\lb_events" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\freak\Library\library\staticfiles\images" />
@@ -599,7 +625,10 @@
       <workItem from="1733431542221" duration="536000" />
       <workItem from="1733432087155" duration="35000" />
       <workItem from="1733439696111" duration="402000" />
-      <workItem from="1733440104901" duration="7332000" />
+      <workItem from="1733440104901" duration="9541000" />
+      <workItem from="1733453553527" duration="48000" />
+      <workItem from="1733453817015" duration="9000" />
+      <workItem from="1733453889962" duration="709000" />
     </task>
     <servers />
   </component>
