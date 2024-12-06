@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3487039d-45c7-437a-929a-29e1de615454" name="Changes" comment="" />
+    <list default="true" id="3487039d-45c7-437a-929a-29e1de615454" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -346,13 +348,13 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Django Server.Library" />
-      <item itemvalue="Django Server.library" />
       <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_context_data_in_item_list_view" />
       <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_both_filters" />
       <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_item_type_filter" />
       <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_with_genre_filter" />
       <item itemvalue="Django tests.Test: tests.collections.views.tests_ItemListView.ItemListViewTests.test_get_item_list_without_filters" />
+      <item itemvalue="Django Server.Library" />
+      <item itemvalue="Django Server.library" />
     </list>
     <recent_temporary>
       <list>
@@ -606,7 +608,8 @@
       <workItem from="1733492853176" duration="878000" />
       <workItem from="1733505786943" duration="2449000" />
       <workItem from="1733508389590" duration="2896000" />
-      <workItem from="1733516585874" duration="310000" />
+      <workItem from="1733516585874" duration="966000" />
+      <workItem from="1733517570401" duration="68000" />
     </task>
     <servers />
   </component>
