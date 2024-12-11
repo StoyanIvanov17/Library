@@ -18,7 +18,7 @@ from library.utils.save_functionality import toggle_saved_object
 
 
 class ItemCreateView(auth_mixin.LoginRequiredMixin, views.CreateView):
-    queryset = Item.objects.all()
+    model = Item
     form_class = ItemCreateForm
     template_name = 'collections/item_create.html'
 
@@ -74,7 +74,7 @@ class ItemListView(auth_mixin.LoginRequiredMixin, views.ListView):
 
 
 class ItemDetailView(auth_mixin.LoginRequiredMixin, views.DetailView):
-    queryset = Item.objects.all()
+    model = Item
     template_name = 'collections/item_detail.html'
     form_class = ReviewForm
 
@@ -106,14 +106,14 @@ class ItemDetailView(auth_mixin.LoginRequiredMixin, views.DetailView):
 
 
 class ItemEditView(auth_mixin.LoginRequiredMixin, views.UpdateView):
-    queryset = Item.objects.all()
+    model = Item
     template_name = 'collections/item_update.html'
     form_class = ItemEditForm
     success_url = reverse_lazy('item display')
 
 
 class ItemDeleteView(views.DeleteView):
-    queryset = Item.objects.all()
+    model = Item
     success_url = reverse_lazy('item display')
 
 

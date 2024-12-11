@@ -14,7 +14,7 @@ from library.utils.save_functionality import toggle_saved_object
 
 
 class EventCreateView(auth_mixin.LoginRequiredMixin, views.CreateView):
-    queryset = Event.objects.all()
+    model = Event
     form_class = EventCreateForm
     template_name = 'events/event_create.html'
 
@@ -53,12 +53,12 @@ class EventListView(auth_mixin.LoginRequiredMixin, views.ListView):
 
 
 class EventDetailView(auth_mixin.LoginRequiredMixin, views.DetailView):
-    queryset = Event.objects.all()
+    model = Event
     template_name = 'events/event_detail.html'
 
 
 class EventEditView(auth_mixin.LoginRequiredMixin, views.UpdateView):
-    queryset = Event.objects.all()
+    model = Event
     template_name = 'events/event_update.html'
     form_class = EventCreateForm
 
@@ -70,7 +70,7 @@ class EventEditView(auth_mixin.LoginRequiredMixin, views.UpdateView):
 
 
 class EventDeleteView(views.DeleteView):
-    queryset = Event.objects.all()
+    model = Event
     success_url = reverse_lazy('event display')
 
 

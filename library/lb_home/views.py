@@ -21,7 +21,7 @@ class HomePageView(views.TemplateView):
 
 
 class CreateBestAuthorsView(views.CreateView):
-    queryset = BestAuthors.objects.all()
+    model = BestAuthors
     form_class = BestAuthorsCreateForm
     template_name = 'home/create_bestselling_author.html'
     success_url = reverse_lazy('home page')

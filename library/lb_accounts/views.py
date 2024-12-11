@@ -101,7 +101,7 @@ def signout_user(request):
 
 
 class AccountDetailsView(auth_mixin.LoginRequiredMixin, views.DetailView):
-    queryset = LibraryProfile.objects.all()
+    model = LibraryProfile
     template_name = 'accounts/account_details.html'
 
     def get_context_data(self, **kwargs):
@@ -113,7 +113,7 @@ class AccountDetailsView(auth_mixin.LoginRequiredMixin, views.DetailView):
 
 
 class AccountUpdateView(auth_mixin.LoginRequiredMixin, views.UpdateView):
-    queryset = LibraryProfile.objects.all()
+    model = LibraryProfile
     template_name = 'accounts/account_update.html'
     form_class = LibraryProfileForm
 
