@@ -54,7 +54,7 @@ class SignUpUserView(views.CreateView):
         send_mail(
             subject="Welcome to the Library!",
             message=f"Please verify your email by clicking the following link: {verification_url}",
-            from_email="freakyjackals@gmail.com",
+            from_email="libraryappmail@gmail.com",
             recipient_list=[user.email],
             fail_silently=False,
         )
