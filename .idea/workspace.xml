@@ -5,11 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3487039d-45c7-437a-929a-29e1de615454" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/library/lb_accounts/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/lb_accounts/migrations/0002_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/lb_collections/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/lb_events/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/lb_home/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -624,6 +619,9 @@
       <workItem from="1734120009134" duration="1086000" />
       <workItem from="1734190704771" duration="72000" />
       <workItem from="1734190875739" duration="1197000" />
+      <workItem from="1734199556884" duration="346000" />
+      <workItem from="1734212104780" duration="626000" />
+      <workItem from="1734234545648" duration="883000" />
     </task>
     <servers />
   </component>

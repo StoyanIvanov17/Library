@@ -23,7 +23,7 @@ class SignInUserView(auth_views.LoginView):
     def get_success_url(self):
 
         user = self.request.user
-        if user.is_authenticated and hasattr(user, 'libraryprofile'):
+        if user.is_authenticated and hasattr(user, 'libraryprofile') and user.libraryprofile.first_name:
             return reverse("account details", kwargs={"pk": user.libraryprofile.pk})
 
         return super().get_success_url()
