@@ -2,7 +2,8 @@ from datetime import timedelta
 
 from django.contrib.auth import mixins as auth_mixin
 from django.db.models import Q
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponseForbidden
+from django.shortcuts import render
 from django.urls import reverse_lazy, reverse
 from django.utils.timezone import now
 from django.views import generic as views
@@ -28,12 +29,12 @@ class ItemCreateView(auth_mixin.LoginRequiredMixin, views.CreateView):
             'slug': self.object.slug
         })
 
-    def get_form(self, form_class=None):
-        form = super().get_form(form_class=form_class)
-
-        form.instance.user = self.request.user
-
-        return form
+    # def get_form(self, form_class=None):
+    #     form = super().get_form(form_class=form_class)
+    #
+    #     form.instance.user = self.request.user
+    #
+    #     return form
 
 
 class ItemListView(auth_mixin.LoginRequiredMixin, views.ListView):
@@ -111,6 +112,11 @@ class ItemEditView(auth_mixin.LoginRequiredMixin, views.UpdateView):
     form_class = ItemEditForm
     success_url = reverse_lazy('item display')
 
+    def dispatch(self, request, *args, **kwargs):
+        if not request.user.is_superuser:
+            return render(request, 'error_403.html')
+        return super().dispatch(request, *args, **kwargs)
+
 
 class ItemDeleteView(views.DeleteView):
     model = Item
@@ -129,3 +135,5 @@ class SaveItemAPIView(APIView):
 
         except Item.DoesNotExist:
             return Response({'success': False, 'error': 'Item not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+# TODO: PHONE NUMBER VALIDATION

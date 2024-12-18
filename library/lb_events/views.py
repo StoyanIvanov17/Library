@@ -1,4 +1,5 @@
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponseForbidden
+from django.shortcuts import render
 from django.urls import reverse, reverse_lazy
 from django.utils import timezone
 from django.views import generic as views
@@ -67,6 +68,11 @@ class EventEditView(auth_mixin.LoginRequiredMixin, views.UpdateView):
             'pk': self.object.pk,
             'slug': self.object.slug
         })
+
+    def dispatch(self, request, *args, **kwargs):
+        if not request.user.is_superuser:
+            return render(request, 'error_403.html')
+        return super().dispatch(request, *args, **kwargs)
 
 
 class EventDeleteView(views.DeleteView):

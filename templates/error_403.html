@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Access Denied</title>
+    <link rel="stylesheet" href="{% static 'css/error_403.css' %}">
+</head>
+<body class="forbidden-page-body">
+  <div class="forbidden-container">
+    <div class="forbidden-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="forbidden-icon-svg">
+        <circle cx="12" cy="12" r="10" stroke-width="2"></circle>
+        <line x1="15" y1="9" x2="9" y2="15" stroke-width="2"></line>
+      </svg>
+    </div>
+    <h1 class="forbidden-title">403 Forbidden</h1>
+    <p class="forbidden-message">
+      Oops! You don't have permission to access this page.
+    </p>
+    <a href="/" class="forbidden-home-link">Go back to Home</a>
+  </div>
+</body>
+</html>
