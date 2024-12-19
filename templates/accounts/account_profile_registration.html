@@ -15,9 +15,17 @@
         <form action="{% url 'registration profile' %}" method="POST" class="log_reg_form" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.first_name|placeholder:'First Name' }}
+            {{ form.first_name.errors }}
+            
             {{ form.last_name|placeholder:'Last Name' }}
+            {{ form.last_name.errors }}
+            
             {{ form.address|placeholder:'Address' }}
+            {{ form.address.errors }}
+            
             {{ form.phone_number|placeholder:'Phone Number' }}
+            {{ form.phone_number.errors }}
+            
             {{ form.city|placeholder:'City' }}
             
             <label for="profile_picture" class="custom-file-label">

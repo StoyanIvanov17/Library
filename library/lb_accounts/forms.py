@@ -47,3 +47,14 @@ class LibraryProfileForm(forms.ModelForm):
         widgets = {
             'profile_picture': forms.FileInput(attrs={'placeholder': 'Profile Picture'}),
         }
+
+    def clean_phone_number(self):
+        phone_number = self.cleaned_data.get('phone_number')
+
+        if phone_number and not phone_number.isdigit():
+            raise ValidationError('Phone number must be digits only.')
+
+        if phone_number and phone_number.isdigit() and len(phone_number) != 10:
+            raise ValidationError('Phone number must be a 10-digit number.')
+
+        return phone_number
