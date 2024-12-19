@@ -136,4 +136,3 @@ class SaveItemAPIView(APIView):
         except Item.DoesNotExist:
             return Response({'success': False, 'error': 'Item not found.'}, status=status.HTTP_404_NOT_FOUND)
 
-# TODO: PHONE NUMBER VALIDATION
