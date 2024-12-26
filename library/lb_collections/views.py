@@ -89,8 +89,9 @@ class ItemDetailView(auth_mixin.LoginRequiredMixin, views.DetailView):
     def post(self, request, *args, **kwargs):
         item = self.get_object()
         form = self.form_class(request.POST)
+        comment = self.request.POST.get('comment', '').strip()
 
-        if form.is_valid():
+        if form.is_valid() and comment:
             review = form.save(commit=False)
             review.item = item
             review.user = request.user

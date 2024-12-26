@@ -3,6 +3,7 @@ let selectedRating = 1;
 const stars = document.querySelectorAll('.star');
 const reviewForm = document.getElementById('review-form');
 const submitButton = document.getElementById('submit-review-btn');
+const commentField = document.getElementById('id_comment');
 const reviewList = document.getElementById('reviews-list');
 
 function updateStarDisplay() {
@@ -15,7 +16,21 @@ function updateStarDisplay() {
     });
 }
 
-// Add click event listeners to each star to select rating
+function checkFormInputs() {
+    const comment = reviewForm.querySelector('#id_comment').value.trim();
+    if (comment === '') {
+        submitButton.disabled = true;
+        submitButton.title = "Please write a comment before submitting the review.";
+    } else {
+        submitButton.disabled = false;
+        submitButton.removeAttribute('title');
+    }
+}
+
+reviewForm.addEventListener('input', checkFormInputs);
+
+checkFormInputs();
+
 stars.forEach(star => {
     star.addEventListener('click', function() {
         selectedRating = this.dataset.value;
@@ -23,7 +38,6 @@ stars.forEach(star => {
     });
 });
 
-// Handle review form submission
 submitButton.addEventListener('click', function(event) {
     event.preventDefault();
 
@@ -53,8 +67,10 @@ submitButton.addEventListener('click', function(event) {
             reviewList.prepend(newReview);
 
             reviewForm.reset();
-            selectedRating = 1;
+            selectedRating = 0;
             updateStarDisplay();
+
+            checkFormInputs();
         } else {
             alert('Failed to submit review: ' + JSON.stringify(data.errors));
         }

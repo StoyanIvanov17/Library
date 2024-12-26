@@ -265,6 +265,14 @@ textarea {
     cursor: pointer;
 }
 
+#submit-review-btn:disabled,
+#submit-review-btn:disabled:hover {
+    background-color: #d6d6d6;
+    color: #a1a1a1;
+    cursor: not-allowed;
+}
+
+
 #submit-review-btn:hover {
     background-color: #006060;
 }
